@@ -19,35 +19,22 @@ var word = ['F', 'O', 'X'];
 var newWord = ['_', '_', '_'];
 var score = 0
 
-// var randomScore1 = function() {
+// var randomScore = function() {
 //   return (Math.floor(Math.random() * (30 - 15)) + 15).toFixed(0);
 //   // console.log((Math.floor(Math.random() * (30 - 15)) + 15).toFixed(0));
 //
 // }
-// randomScore1();
-
-// var randomScore = function() {
-//   var number = (Math.random() * 100).toFixed(0);
-//   console.log(number);
-//   if (number <20) {
-//     number += 25
-//     console.log(number);
-//   } else if (number >50) {
-//     number -= 35
-//     console.log(number);
-//   }
-// }
 // randomScore();
+
 
 var guessLetter = function (guess) {
 
-    var correctLetter = guess;
 
-
-    switch (correctLetter) {
+    switch (guess) {
      case 'F':
          letter = newWord.splice(0, 1, 'F');
-         score += 15;
+        //  score += 15;
+         score = (Math.floor(Math.random() * (30 - 15)) + 15).toFixed(0);
         //  score += randomScore();
          console.log(newWord);
          console.log(score);
@@ -55,7 +42,8 @@ var guessLetter = function (guess) {
          break;
      case 'O':
          letter = newWord.splice(1, 1, 'O');
-         score += 15;
+        //  score += 15;
+         score = (Math.floor(Math.random() * (30 - 15)) + 15).toFixed(0);
         //  score += randomScore();
          console.log(newWord);
          console.log(score);
@@ -63,16 +51,17 @@ var guessLetter = function (guess) {
          break;
      case 'X':
          letter = newWord.splice(2, 1, 'X');
-         score += 15;
+         score = (Math.floor(Math.random() * (30 - 15)) + 15).toFixed(0);
+        //  score += 15;
         //  score += randomScore();
          console.log(newWord);
          console.log(score);
          alert("You so smart! You are on " + score + " Point!");
          break;
-     default:
+      default:
         //  alert('You Suck =) You are now on ' + score -5 + ' Points.');
         //  alert('You Suck =) You are now on ' + score + ' Points.');
-        alert('You Suck =)');
+         alert('You Suck =)');
          score -= 5;
          console.log(score);
         //  window.location = "https://giphy.com/gifs/EizPK3InQbrNK"
@@ -82,9 +71,9 @@ var guessLetter = function (guess) {
             //   var correctWord = word.join('');
             //   console.log(correctWord);
             //   alert("You're an actual winner");
-      }
-   }
+  }
 }
+
  guessLetter('s');
  guessLetter('O');
  guessLetter('X');
