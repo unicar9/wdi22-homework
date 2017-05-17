@@ -8,7 +8,6 @@
 // // Write a function called guessLetter that will:
 // // Take one argument, the guessed letter.
 // // Iterate through the word letters and see if the guessed letter is in there.
-
 // // If the guessed letter matches a word letter, changed the guessed letters array to reflect that.
 // // When it's done iterating, it should log the current guessed letters ('F__') and congratulate the user if they found a new letter.
 // // It should also figure out if there are any more letters that need to be guessed, and if not,
@@ -20,36 +19,70 @@ var word = ['F', 'O', 'X'];
 var newWord = ['_', '_', '_'];
 var score = 0
 
+// var randomScore1 = function() {
+//   return (Math.floor(Math.random() * (30 - 15)) + 15).toFixed(0);
+//   // console.log((Math.floor(Math.random() * (30 - 15)) + 15).toFixed(0));
+//
+// }
+// randomScore1();
+
+// var randomScore = function() {
+//   var number = (Math.random() * 100).toFixed(0);
+//   console.log(number);
+//   if (number <20) {
+//     number += 25
+//     console.log(number);
+//   } else if (number >50) {
+//     number -= 35
+//     console.log(number);
+//   }
+// }
+// randomScore();
+
 var guessLetter = function (guess) {
+
     var correctLetter = guess;
+
 
     switch (correctLetter) {
      case 'F':
          letter = newWord.splice(0, 1, 'F');
          score += 15;
+        //  score += randomScore();
          console.log(newWord);
          console.log(score);
-         alert("You so smart!");
+         alert("You so smart! You are on " + score + " Point!");
          break;
      case 'O':
          letter = newWord.splice(1, 1, 'O');
          score += 15;
+        //  score += randomScore();
          console.log(newWord);
          console.log(score);
-         alert("You so smart!");
+         alert("You so smart! You are on " + score + " Point!");
          break;
      case 'X':
          letter = newWord.splice(2, 1, 'X');
          score += 15;
+        //  score += randomScore();
          console.log(newWord);
          console.log(score);
-         alert("You so smart!");
+         alert("You so smart! You are on " + score + " Point!");
          break;
      default:
-         alert('You Suck =)');
+        //  alert('You Suck =) You are now on ' + score -5 + ' Points.');
+        //  alert('You Suck =) You are now on ' + score + ' Points.');
+        alert('You Suck =)');
          score -= 5;
          console.log(score);
         //  window.location = "https://giphy.com/gifs/EizPK3InQbrNK"
+
+
+            // if (newWord === ['F', 'O', 'X']) {
+            //   var correctWord = word.join('');
+            //   console.log(correctWord);
+            //   alert("You're an actual winner");
+      }
    }
 }
  guessLetter('s');
@@ -60,9 +93,7 @@ var guessLetter = function (guess) {
  guessLetter('F');
  guessLetter('l');
 
- // if (newWord === ['F', 'O', 'X']) {
- //   var correctWord = word.join('');
- //   console.log(correctWord);
+
 
 
 // Bonus: Make it more like Wheel of Fortune:
