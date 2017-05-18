@@ -11,7 +11,7 @@ DrEvil
 // console.log(DrEvil(2))
 
 var DrEvil = function(amount){
-  if (amount > 1000000)
+  if (amount === 1000000)
   {console.log(amount + ' dollars (pinky)');
 }else {
   console.log(amount + ' dollars');
@@ -36,6 +36,17 @@ var mixUp = function (string1, string2) {
   console.log(updatedString2);
 }
 mixUp('abcdefg', 'zyx');
+
+// FixStart
+//
+// Create a function called fixStart. It should take a single argument, a string, and return a version where all occurences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:
+//
+// fixStart('babble'): 'ba**le'
+
+var fixStart = function(string){
+
+}
+
 
 // Verbing
 //
