@@ -3,7 +3,7 @@
 //- Write a function called squareNumber that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9."
 
 var squareNumber = function(number) {
-  square = number**2;
+  var square = number**2;
   console.log("The result of squaring the number " + number + " is " + square + ".");
   return square;
 }
@@ -13,7 +13,7 @@ squareNumber(3)
 //- Write a function called halfNumber that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of 5 is 2.5.".
 
 var halfNumber = function(number) {
-  half = number / 2;
+  var half = number / 2;
   console.log("Half of " + number + " is " + half + ".");
   return half;
 }
@@ -23,8 +23,8 @@ halfNumber(8)
 //- Write a function called percentOf that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
 
 var percentOf = function(number1, number2) {
-  percent = (number1 / number2) * 100;
-  percentRound = percent.toFixed(2);
+  var percent = (number1 / number2) * 100;
+  var percentRound = percent.toFixed(2);
   console.log(number1 + " is " + percentRound + "% of " + number2 + ".");
   return percentRound;
 }
@@ -34,13 +34,13 @@ percentOf(2,6)
 //- Write a function called areaOfCircle that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
 
 var areaOfCircle = function(radius) {
-  area = Math.PI * radius**2;
-  areaRounded = area.toFixed(2);
+  var area = Math.PI * radius**2;
+  var areaRounded = area.toFixed(2);
   console.log("The area of a circle with radius of " + radius + " is " + areaRounded + ".");
   return areaRounded;
 }
 
-areaOfCircle(4);
+console.log("the return value of area of circle is " + areaOfCircle(4));
 
 // ## Part 2
 // Write a function that will take one argument (a number) and perform the following operations, using the functions you wrote earlier1:
@@ -51,6 +51,7 @@ areaOfCircle(4);
 
 var numberWang = function(v) {
   var x = halfNumber(v);
+  console.log("here is x " + x);
   var y = squareNumber(x);
   var z = areaOfCircle(y);
   var result = percentOf(z,y);
@@ -79,7 +80,7 @@ var drEvil = function(amount) {
   }
 }
 
-drEvil(1000000);
+drEvil(100000);
 
 // ## MixUp
 //
@@ -93,53 +94,14 @@ drEvil(1000000);
 var mixUp = function(input1, input2) {
   firstTwoInput1 = input1[0] + input1[1];
   firstTwoInput2 = input2[0] + input2[1];
-  remainderInput1 = input1.slice(2,100);
-  remainderInput2 = input2.slice(2,100);
+  remainderInput1 = input1.slice(2, input1.length);
+  remainderInput2 = input2.slice(2);
   new1 = firstTwoInput1 + remainderInput2;
   new2 = firstTwoInput2 + remainderInput1;
   console.log(new1, new2)
 }
 
 mixUp("Andy", "Brown");
-
-
-// ## FixStart
-//
-// Create a function called fixStart. It should take a single argument, a string, and return a version
-// where all occurences of its first character have been replaced with '*', except for the first character
-// itself. You can assume that the string is at least one character long. For example:
-// ```
-// fixStart('babble'): 'ba**le'
-// ```
-
-/*
-var fixStart = function(string) {
-  character = string[0];
-  console.log(character);
-  for (var i = 0; i < string.length; i++) {
-  if (string[i] === character) {
-    var word = string.replace(character, "*");
-    console.log(word);
-  } else {
-    console.log("Error");
-  }
-}
-
-fixStart("babble");
-*/
-
-
-// var fixStart = function(string) {
-//     var character = string[0];
-//     console.log(character);
-//     var newWord = [];
-//     for(var i = 0; i < string.length; i++) {
-//       if (string[i] === "character") newWord.push(i+1);
-//       console.log(newWord);
-//     }
-//
-//
-// fixStart("scissors")
 
 
 
@@ -187,6 +149,7 @@ verbing("pant");
 //   notBad('This movie is not so bad!'): 'This movie is good!'
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
 // ```
+
 
 
 var notBad = function(string) {
