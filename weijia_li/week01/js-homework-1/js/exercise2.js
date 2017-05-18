@@ -37,8 +37,9 @@ mixUp('dog', 'dinner');
 var fixStart = function(str) {
   var array = str.split('');
   var i = 1
-  while (i <= array.length, i++, array[i] === array[0]) {
-    array[i] = '*';
+  while (i <= array.length, i++) {
+    if(array[i] === array[0])
+      array[i] = '*';
   };
 
   var str1 = array.join('');
@@ -46,8 +47,8 @@ var fixStart = function(str) {
   return str1;
 };
 
-fixStart('babble');
-fixStart('goggle');
+fixStart('google');
+fixStart('gooogle');
 
 // Create a function called verbing. It should take a single argument, a string. If its length is at least 3, it should add 'ing' to its end, unless it already ends in 'ing', in which case it should add 'ly' instead. If the string length is less than 3, it should leave it unchanged. For example:
 //
