@@ -8,7 +8,7 @@
 // Pretend you don't know the word, and call guessLetter multiple times with various letters to check that your program works.
 
 var currentRew = 0;
-var left = [];
+var guessedWords = [];
 var lifeLeft = 6;
 var letterFound = false;
 
@@ -43,10 +43,18 @@ var guess = function( g ) {
       letterFound = true;
     }
   }
+  for (var i = 0; i < guessedWords.length; i++) {
+    if (g === guessedWords[i]){
+      console.log('Try again');
+    } else {
+      letterCheck();
+    }
+  }
 
-  letterCheck();
   console.log(attempt.join(''));
   console.log('$ ' + currentRew);
+
+  guessedWords.push(g);
 
   if ( attempt.join('') === answer.join('') ) {
     console.log('You win. You can take home $' + currentRew);
@@ -56,6 +64,8 @@ var guess = function( g ) {
     hangman();
   }
 };
+
+
 
 var hangman = function(){
   var hang =[ "  ____________" ,
