@@ -23,10 +23,33 @@ var mixUp = function(string1, string2){
 
 var fixStart = function(string){
   var firstLetter = string[0];
-  // var swappy = string.replace("*", firstLetter);
-  var swappy = string.replace(/b/g, "*");
+  var swappy = string.replace(/b/gi, "*");
   console.log(swappy);
 }
+
+
+
+var fixStart = function( str ){
+
+  var firstChar = str[0];
+
+  for (var i = 0; i < str.length; i++) {
+    var currentChar = str[i];
+
+    if( currentChar === firstChar ){
+      str[i] = '*'
+    } //if
+
+  } //for
+  return str;
+
+}
+
+
+
+
+
+
 
 // fixStart('babble');
 
@@ -44,16 +67,12 @@ var verbing = function(string){
 
 // verbing("swimming");
 
+
+
 var notBad = function(string){
   var newString = string.split("not").join("good").split("bad").join('');
   console.log(newString);
 }
 
-notBad("this is not bad");
 
-
-
-
-// var not = string.search("not");
-// var bad = string.search("bad");
-// if (not>bad)
+// notBad("this is not bad");

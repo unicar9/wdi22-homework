@@ -6,7 +6,6 @@ var squareNumber = function(x){
 
 // squareNumber(5);
 
-
 var halfNumber = function(x){
   var result = x / 2
   console.log("The result of halfing the number " + x + " is " + result);
@@ -37,3 +36,5 @@ var calculator = function(x){
   // console.log(resultThree);
   var resultFour = percentOf(resultThree,resultTwo);
 }
+
+calculator(20);
