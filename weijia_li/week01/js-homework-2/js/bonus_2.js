@@ -72,7 +72,6 @@ guessLetter('P');
 guessLetter('W');
 guessLetter('L');
 
-
 guessLetter('M');
 guessLetter('F');
 guessLetter('O');

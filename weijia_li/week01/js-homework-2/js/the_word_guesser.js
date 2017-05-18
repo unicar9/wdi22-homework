@@ -23,17 +23,22 @@ var guessLetter = function (n) {
   }
 
   if (arrGuess.length !== 0) {
-    console.log('Congratulations, you found a new letter ' + String(n));
+    console.log('Congratulations, you found a new letter ' + n);
   }
+
   var remain = arrWord.length - arrGuess.length;
-  if (remain !== 0) {
+
+  if (remain > 0) {
     console.log(remain + ' more letter(s) to be guessed!');
-  } else {
+  } else if (remain === 0) {
     console.log('Congratulations, you win the game! The word is ' + arrGuess.join('') + '.');
+  } else {
+    console.log('Please try again.');
   }
 };
 
 guessLetter('M');
 guessLetter('F');
 guessLetter('O');
+guessLetter('X');
 guessLetter('X');
