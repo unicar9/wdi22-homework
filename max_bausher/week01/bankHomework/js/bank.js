@@ -64,8 +64,8 @@ var makeDeposit = function (depositAmount, account) {
   // console.log("This account has been received a deposit of " + account.currentBalance);
 };
 
-var makeWithdrawl = function (withdarawlAmount, account) {
-  account.currentBalance -= parseInt(withdarawlAmount);
+var makeWithdrawal = function (withdarawalAmount, account) {
+  account.currentBalance -= parseInt(withdarawalAmount);
   alert("Current balance is now: " + account.currentBalance);
   // console.log("===> This account has been received a deposit of " + account.currentBalance)
   // console.log("viewCurrentBalance is alive!")
@@ -74,7 +74,7 @@ var makeWithdrawl = function (withdarawlAmount, account) {
 var viewCurrentBalance = function(password) {
   for (var i = 0; i < accounts.length; i++) {
       if (password === accounts[i].password){
-        var res =  prompt("Welcome back " + accounts[i].ownerName + ", your current balance is " + accounts[i].currentBalance + ". Would you like to make a withdrawl or deposit?");
+        var res =  prompt("Welcome back " + accounts[i].ownerName + ", your current balance is " + accounts[i].currentBalance + ". Would you like to make a withdrawal or deposit?");
         console.log(res);
             if (res === "deposit"){
             var depositAmount = prompt("Thank you for your business, how much would you like to deposit today?");
@@ -82,10 +82,10 @@ var viewCurrentBalance = function(password) {
             makeDeposit(depositAmount, accounts[i]);
 
         };
-        if (res === "withdrawl"){
-          var withdarawlAmount = prompt("Cash money!!!! How much would you like to take out this time?");
-          console.log(withdarawlAmount);
-           makeWithdrawl(withdarawlAmount, accounts[i]);
+        if (res === "withdrawal"){
+          var withdarawalAmount = prompt("Cash money!!!! How much would you like to take out this time?");
+          console.log(withdarawalAmount);
+           makeWithdrawal(withdarawalAmount, accounts[i]);
         }
       };
   }
