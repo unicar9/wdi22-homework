@@ -28,8 +28,8 @@ var percentOf = function(num1, num2){
 percentOf(4, 5);
 
 var areaOfCircle = function (radius){
-  var area = ((radius * radius) * Math.PI);
-  var roundedArea = Math.round(area);
+  var area = ((radius * radius) * Math.PI);// also can do ** to do squaring
+  var roundedArea = Math.round(area); // .toFixed = another method to use.
   console.log("The area for a circle with radius " + radius + " is " + roundedArea + ".");
   return roundedArea;
 };
@@ -42,3 +42,13 @@ areaOfCircle(4);
 // Square the result of #1 and store that result.
 // Calculate the area of a circle with the result of #2 as the radius.
 // Calculate what percentage that area is of the squared result (#3).
+
+var numberWang = function(){
+  var x = halfNumber(v);
+  console.log('here is x ' + x);
+  var y = squareNumber(x);
+  var z = areaOfCircle(y);
+  var result = percentOf(z,y);
+}
+
+numberWang(4);

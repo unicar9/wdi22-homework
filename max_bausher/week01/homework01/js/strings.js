@@ -39,17 +39,18 @@ mixUp("Maximus", "Jessica");
 // Verbing
 
 var fixStart = function(strOriginal){
-  return(strOriginal.charAt(0));
-  for (i = 0; i < strOriginal.length; i++) {
-      return(str.replace(/b/gi,'*'));
-    }
-    var newString = function(str) {
-     strOriginal.replace(, "*");
-     console.log(newString);
+  var firstChar = strOriginal[0]; //.charAt(0);
+
+  for (i = 1; i < strOriginal.length; i++) {
+      var currentChar = strOriginal[i];
+      if (currentChar === firstChar){
+          strOriginal.replace(currentChar, "*");
+          console.log(currentChar);
+          console.log(strOriginal);
+      }
    }
-  };
-  var newString = strOriginal;
-  console.log(newString.replace(strOriginal.charAt(0), "*"));
+  // var newString = strOriginal;
+  // console.log(newString.replace(strOriginal.charAt(0), "*"));
 };
 
 fixStart('babble');
