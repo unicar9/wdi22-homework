@@ -14,6 +14,33 @@ console.log(guessed);
 }
 guessLetter('F');
 
+// michelle's pres
+var word = ['F', 'O', 'X'];
+var guessed = ['_', '_', '_'];
+//here var guessed really means 'correctly guessed'. if a letter that the user enters is the same as one of the values in the variable word's array, it should replace ne of the underscores in the guessed array
+//
+var guessLetter = function (guess) {
+  // a function called guessLetter. Its parameter is the letter that the guesser guesses and so is called guess.
+
+  for (var i = 0; i < word.length; i++){{
+
+//iterates through each value of var word's array, as many times as there are letters/items/values
+
+if ({guessed[0] = word[i];}{
+  //if the user inputs
+}
+
+  letter == word[i]);
+{guessed[0] = (guessLetter);}
+//the make the first guessed value the same as what was inputed
+console.log(guessed);
+
+  }
+
+}
+guessLetter('F');
+
+
 // how to do case insensitive guess letter compare to word, does double equals do it
 // why isn't f being pushed to position 0 in guessed
 
@@ -67,3 +94,48 @@ guessLetter('F');
 // };
 //
 // maxOfTwoNumbers(5,3);
+
+var wordLetters     = ['G', 'O', 'A', 'T'];
+var guessedLetters  = ['_', '_', '_', '_'];
+//here var guessedLetters really means 'correctly guessed'. if a letter that the user inputs is the same as one of the values in the var wordLetters' array, it should replace one of the underscores in the guessed array
+
+function guessLetter(letter) {
+// a function called guessLetter. Its parameter is the letter that the guesser inputs and so is called 'letter'
+    var goodGuess = false;
+    var moreToGuess = false;
+    // what do these do, why start these false *these variables are the basis upon which the final console logs issue. the for thing below decides two things 1) whether these two vars will switch to true (i guess so the default is not prompting the console logs) and 2)they do the behind the scenes pushing of letters to the guessedletters var array
+    for (var i = 0; i < wordLetters.length; i++) {
+//iterates through each value of var wordLetters' array, as many times as there are letters/items/values, one at a time
+        if (wordLetters[i] == letter) {
+          //if wordLetters[i] i.e. either g,o,a or t matches letters which is the parameter of this function, i.e. the letter the user inputs
+            guessedLetters[i] = letter;
+//if true, change one of the values of guessed letter to that correctly inputed letter
+            goodGuess = true;
+            //if true then now goodGuess is true
+        }
+        if (guessedLetters[i] == '_') {
+//why not else if. is this responding to that last line of code? i.e had letter been correct then guessedLetters [i] would not be _
+//i think it is. so if first block of guess letter as caused this on to be true.
+            moreToGuess = true;
+
+        }//so by this point all the populating of guessedLetters with correctly guessed values has happen. it just hasn't been shown to user yet
+    }
+    if (goodGuess) {
+        console.log('Yay, you found a letter!');
+        console.log(guessedLetters.join(''));
+        //joins the elements of an array into a string, and returns the string. The elements will be separated by a specified separator. The default separator is comma (,).
+
+
+        if (!moreToGuess) {
+            console.log('YOU WON!');
+        }
+    } else {
+        console.log('Oh noes, thats not right!');
+    }
+}
+
+guessLetter('G');
+guessLetter('I');
+guessLetter('O');
+guessLetter('A');
+guessLetter('T');
