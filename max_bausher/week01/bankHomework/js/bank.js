@@ -57,6 +57,19 @@ var accounts = [
 //   alert("Your new balance is " + sum + "!");
 // };
 
+var makeTransfer = function (transferToAccount, transferAmount, account) {
+  console.log(account)
+  for (var i = 0; i < accounts.length; i++) {
+     if (accounts[i].ownerName == transferToAccount) {
+       account.currentBalance -= parseInt(transferAmount);
+       accounts[i].currentBalance += parseInt(transferAmount);
+       alert("Transfer to " + accounts[i].ownerName + " successful! Your new balance is: " + account.currentBalance);
+       console.log(accounts);
+       break;
+     }
+  }
+}
+
 var makeDeposit = function (depositAmount, account) {
   console.log("===>" + depositAmount, account);
 
@@ -81,7 +94,7 @@ var makeWithdrawal = function (withdarawalAmount, account) {
 var viewCurrentBalance = function(password) {
   for (var i = 0; i < accounts.length; i++) {
       if (password === accounts[i].password){
-        var res =  prompt("Welcome back " + accounts[i].ownerName + ", your current balance is " + accounts[i].currentBalance + ". Would you like to make a withdrawal or deposit?");
+        var res =  prompt("Welcome back " + accounts[i].ownerName + ", your current balance is " + accounts[i].currentBalance + ". Would you like to make a withdrawal, deposit, or transfer?");
         console.log(res);
             if (res === "deposit"){
             var depositAmount = prompt("Thank you for your business, how much would you like to deposit today?");
@@ -93,6 +106,13 @@ var viewCurrentBalance = function(password) {
           var withdarawalAmount = prompt("Cash money!!!! How much would you like to take out this time?");
           console.log(withdarawalAmount);
            makeWithdrawal(withdarawalAmount, accounts[i]);
+        }
+        if (res === "transfer") {
+          var transferToAccount = prompt("Who would you like to transfer to?")
+          console.log(transferToAccount);
+          var transferAmount = prompt("How much would you like to transfer");
+          console.log(transferAmount);
+          makeTransfer(transferToAccount, transferAmount, accounts[i]);
         }
       };
   }
