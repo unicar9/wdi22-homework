@@ -59,14 +59,21 @@ var accounts = [
 
 var makeDeposit = function (depositAmount, account) {
   console.log("===>" + depositAmount, account);
+
   account.currentBalance += parseInt(depositAmount);
   alert("Current balance is now: " + account.currentBalance);
+
   // console.log("This account has been received a deposit of " + account.currentBalance);
 };
 
 var makeWithdrawal = function (withdarawalAmount, account) {
-  account.currentBalance -= parseInt(withdarawalAmount);
-  alert("Current balance is now: " + account.currentBalance);
+  if (account.currentBalance - withdarawalAmount > 0) {
+    account.currentBalance -= parseInt(withdarawalAmount);
+    alert("Current balance is now: " + account.currentBalance);
+  } else {
+    alert("Insufficient funds! Please contact your local Bada$$ Bank branch");
+  }
+
   // console.log("===> This account has been received a deposit of " + account.currentBalance)
   // console.log("viewCurrentBalance is alive!")
 };
