@@ -11,7 +11,7 @@ var lives = 6
 
 var guessLetter = function(guess){
   for (var i = 0; i < answerWord.length; i++) {{
-    if (guess === answerWord[i]){
+    if (guess === answerWord[i] && guess !== runningResult[i]){
         {runningResult[i] = guess;
                   }
         console.log('Successs: ' + runningResult.join('') + " You have " + lives + " lives left");
@@ -25,7 +25,7 @@ var guessLetter = function(guess){
         alert ('have another go')}{
         if (lives < 1)
       {console.log("You're dead!")};} //code stops when lives = 1, so can't show that you
-    ;};}
+    }
     {
      if (answerWord.toString('') === runningResult.toString('')){
         console.log("You did it! You're alive");
@@ -35,7 +35,7 @@ var guessLetter = function(guess){
 guessLetter('X');
 guessLetter('F');
 guessLetter('J');
-guessLetter('G');
+guessLetter('F');
 guessLetter('D');
 guessLetter('W');
 guessLetter('Q');
