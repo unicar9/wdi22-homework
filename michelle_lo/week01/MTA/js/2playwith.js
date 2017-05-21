@@ -21,8 +21,6 @@ var planTrip = function(startLine, startStation, destLine, destStation) {{
     // if (startStation === metroLines[startLine][i])
 
   };
-
-
   {
   var destStationsVar = metroLines[ destLine ];
     console.log("TEST B " + destStationsVar + " this is test of var stations = metroLines[ startLine ]");
