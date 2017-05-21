@@ -3,22 +3,41 @@ console.log("MTA is the best!")
 //create metro line objects
 
 
-var lines = {
+var metroLines = {
   lineN:  ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
   lineL: ["8th", "6th", "Union Square", "3rd", "1st"],
   line6: ["Grand Central", "33rd", "28th", "23rd", "Union Square","Astor Place"]
-
 };
 
+//to convert metro object to an array
+var metroLinesArr = Object.keys(metroLines).map(function (key) { return metroLines[key]; });
 
-var lines = {
-  lineN:  ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
-  lineL: ["8th", "6th", "Union Square", "3rd", "1st"],
-  line6: ["Grand Central", "33rd", "28th", "23rd", "Union Square","Astor Place"]
+
+var findStartStation = function (startLine, startStation ){
+  for (var i = 0; i < metroLinesArr.length; i++) {
+    console.log('this is working: ' + Object.keys(metroLines)[i] + "is the following stops: " + metroLinesArr[i]);
+    if (startLine === metroLinesArr[i])
+      console.log('line is working')
+      for (var j = 0; j < metroLinesArr.length; j++) {
+        if (startStation === metroLinesArr[j]) {
+          console.log('station is working');
+
+          var findStartStationIndex = Object.keys(metroLines)[j].indexOf(startStation);
+          console.log('station is working');
+          // console.log("TESTING START STATION: I found " + metroLines[i].stops[j] + " it is on the " + metroLines[i].name + ". It is stop number " + (findStartStationIndex + 1))
+          return findStartStationIndex
+        }
+
+      }
+  };
+}
+
+findStartStation("LineN", "Times Square");
+
 
   // findNum: {
-  //   // to identify destination station
-  // findStartStation: function( startLine, startStation ){
+    // to identify destination station
+  // findStartStation: function(startLine, startStation ){
   //   var metroLines = lines.line;
   //   for (var i = 0; i < metroLines.length; i++) {
   //     if (startLine === metroLines[i].name)
@@ -27,12 +46,12 @@ var lines = {
   //           var findStartStationIndex = metroLines[i].stops.indexOf(startStation);
   //           // console.log("TESTING START STATION: I found " + metroLines[i].stops[j] + " it is on the " + metroLines[i].name + ". It is stop number " + (findStartStationIndex + 1))
   //           return findStartStationIndex
-  //         }
+  // //         }
   //
   //       }
   //   };
   // },
-  //
+
   // findDestStation: function( destLine, destStation ){
   //   var metroLines = metro.line;
   //   for (var i = 0; i < metroLines.length; i++) {
@@ -78,7 +97,7 @@ var lines = {
   //   // findNumStops: function(startLine, startStation, destLine, destStation) { metro.findNum.findDestStation(destLine, destStation) - metro.findNum.findStartStation(startLine, startStation)}
   //   //not working atm
 
-}
+// }
   // planTrip: function(startLine, startStation, destLine, destStation) )
 
 // var numberofStops = (findStartStationIndex - findDes tStationIndex)
@@ -86,7 +105,9 @@ var lines = {
 // console.log( metro.findDestStation("L Line", "3rd"));
 // console.log(metro.findStartStation("N Line", "Times Square"))
 // console.log(metro.findDestStation("6 Line", "28th")),
-console.log(metro.makeList("6 Line", "28th","6 Line", "Astor Place"))
+// console.log(metro.makeList("6 Line", "28th","6 Line", "Astor Place"))
+
+
 
 // var stopList =
 
