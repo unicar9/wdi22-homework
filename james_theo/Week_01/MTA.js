@@ -1,6 +1,6 @@
 
 // Code which I probably wont need. Keep it here just in case. Screw you MTA
-
+//
 
 // var linesOnly = Object.keys(trainLine)
 
@@ -48,7 +48,8 @@ var trainLine  = {
   line6: ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
 };
 
-var plannedTrip = [];
+var tripFirstHalf = [];
+var tripSecondHalf = [];
 
 //
 //
@@ -72,52 +73,51 @@ var stationS = journeyBeginEnd.slice(1, 2);
 var lineE = journeyBeginEnd.slice(2, 3);
 var stationE = journeyBeginEnd.slice(3);
 
-// var station = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"]
-// var choosenStation = '34th'
-//
-// var beginStaIndex = function() {
-//
-// }
-//
-// var endStaIndex = function() {
-//
-// }
-//
-// var uSquareStaIndex = function() {
-//
-// }
-//
-//
-// if (station.indexOf(choosenStation) < station.indexOf('Union Square')) {
-//
-//   plannedTrip = station.slice(station.indexOf(choosenStation), (station.indexOf('Union Square')));
-//   // console.log("yes");
-//
-// } else if (station.indexOf(choosenStation)> station.indexOf('Union Square')) {
-//   plannedTrip = station.slice(station.indexOf(choosenStation), (station.indexOf('Union Square')));
-//
-//   console.log("yes yes yes");
-// }
-// plannedTrip = station.slice();
 
-
-
-// var lineName = 'lineN';
+// James, to retrieve the array of stations for a particular line, you want something like this:
+// ```var lineName = 'lineN';
 // var stations = trainLine[ lineName ];
+// ```
+// Now the variable `stations` will have as its value the array ` ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"]`
+//
+// Luke Hammer [12:34 PM]
+// Keep in mind that `lineName` will probably be an argument to your trip planning function, not a new variable declared with `var lineName` in the way i've shown for this example
+
+
+// Testing data inputs. Delete once code is running and use object.
+var lineN = ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"];
+var lineL = ["8th", "6th", "Union Square", "3rd", "1st"];
+var choosenStation = '28th'
+var choosenEndSation = "1st"
+
+var beginStaIndex = function() {
+  return lineN.indexOf(choosenStation)
+}
+
+var endStaIndex = function() {
+  return lineL.indexOf(choosenEndSation)
+}
+
+
+if (lineN.indexOf(choosenStation) < lineN.indexOf('Union Square')) {
+
+  tripFirstHalf = lineN.slice(beginStaIndex(), (lineN.indexOf('Union Square') + 1));
+  tripSecondHalf = lineL.slice((lineL.indexOf('Union Square')), endStaIndex() + 1);
+  // console.log("yes");
+
+// } else if (lineN.indexOf(choosenStation)> lineN.indexOf('Union Square')) {
+  // tripFirstHalf = lineN.slice(endStaIndex(), (lineN.indexOf('Union Square')));
+
+  // console.log("yes yes yes");
+}
+
+
+
+console.log("you must travel through the following stops on the " + tripFirstHalf.join(', ') + " change at Union Square. Youre journey continues through the following stops " + tripSecondHalf.join(', ') + ' ' + (tripFirstHalf.length + tripSecondHalf.length) + " in total"  );
 
 // var planTrip = function(lineStart, stationStart, lineEnd, stationEnd) {
 // //
 // // }
-
-
-
-// isolate key based on inputs
-// isolate station based on inputs
-// push reaminder of array into new array up to union sqaure
-// push from union square to journey end
-//
-// alert journey
-
 
 
 // # MTA Lab
