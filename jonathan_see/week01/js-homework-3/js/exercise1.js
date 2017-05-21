@@ -22,26 +22,48 @@
 //Pretend you don't know the word, and call guessLetter multiple
 //times with various letters to check that your program works.
 
+// var correctLetters = ['F', 'O', 'X'];
+// var guessedLetters = ['_', '_', '_'];
+//
+// var guessLetter = function(guessedLetter) {
+//
+// // loop the guessed letter to see if it is a correct letter
+//     for (var i = 0; i < guessedLetters.length; i++) {
+//
+// // if guessed letter is correct letter
+//       if (guessedLetters[i] === correctLetters[0] || correctLetters[1] || correctLetters[2]) {
+// // change guessed letters array to reflect correct letter
+//       guessedLetters.push(correctLetters[i]);
+// // congratulate for guessing a correct letter
+//       console.log(guessedLetters + "Congratulations you've got one letter!");
+// // if guessed letter is not correct
+//       } else {
+// // remove wrong guessed letter
+//       guessedLetters.shift()
+// // log the current guessed letters (join the letters)
+//     };
+// }
+// //guessedLetters(box);
+// guessLetter('B');
+
 var correctLetters = ['F', 'O', 'X'];
 var guessedLetters = ['_', '_', '_'];
 
-var guessLetter = function(guessedLetter) {
+var guessLetter = function(guess) {
+  for (var i = 0; i < correctLetters.length; i++) {
+    if (guess === correctLetters[i]) {
+      guessedLetters[i] = guess;
+    }
+    console.log(guessedLetters.join(''));
+    alert ("You got a letter");
+  }
+  if (correctLetters.toString('') !== guessedLetters.toString('')) {
+    console.log("Keep going");
+    alert ("Have another go");
+    }
+    else (correctLetters.toString('') === guessedLetters.toString('')) {
+    console.log("You did it");
+    alert ("Great Work!");
+    }
 
-// loop the guessed letter to see if it is a correct letter
-    for (var i = 0; i < guessedLetters.length; i++) {
-
-// if guessed letter is correct letter
-      if (guessedLetters[i] === correctLetters[0] || correctLetters[1] || correctLetters[2]) {
-// change guessed letters array to reflect correct letter
-      guessedLetters.push(correctLetters[i]);
-// congratulate for guessing a correct letter
-      console.log(guessedLetters + "Congratulations you've got one letter!");
-// if guessed letter is not correct
-      } else {
-// remove wrong guessed letter
-      guessedLetters.shift()
-// log the current guessed letters (join the letters)
-    };
-}
-//guessedLetters(box);
-guessLetter('B');
+  guessLetter('X');
