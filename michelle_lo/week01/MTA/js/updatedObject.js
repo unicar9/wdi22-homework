@@ -15,15 +15,16 @@ var metroLinesArr = Object.keys(metroLines).map(function (key) { return metroLin
 
 var findStartStation = function (startLine, startStation ){
   for (var i = 0; i < metroLinesArr.length; i++) {
-    console.log('this is working: ' + Object.keys(metroLines)[i] + "is the following stops: " + metroLinesArr[i]);
-    if (startLine === metroLinesArr[i])
-      console.log('line is working')
+    console.log('first loop is working: ' + Object.keys(metroLines)[i] + "is the following stops: " + metroLinesArr[i]);
+    if (startLine === metroLinesArr[i]){
+      console.log('first if statement for lines is working: ' + Object.keys(metroLines)[i])}
       for (var j = 0; j < metroLinesArr.length; j++) {
-        if (startStation === metroLinesArr[j]) {
-          console.log('station is working');
+        console.log('is line 22 working?');
+        if (startStation === metroLinesArr[i][j]) {
+          console.log('station is working. we are looking at ' + metroLinesArr[i][j]);
 
-          var findStartStationIndex = Object.keys(metroLines)[j].indexOf(startStation);
-          console.log('station is working');
+          var findStartStationIndex = metroLinesArr[i].indexOf(metroLinesArr[i][j]);
+          console.log(findStartStationIndex);
           // console.log("TESTING START STATION: I found " + metroLines[i].stops[j] + " it is on the " + metroLines[i].name + ". It is stop number " + (findStartStationIndex + 1))
           return findStartStationIndex
         }

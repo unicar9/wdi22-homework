@@ -14,10 +14,8 @@ var planTrip = function(startLine, startStation, destLine, destStation) {
   if (startLine === destLine){
     var startStationsVar = metroLines[ startLine ];
       // console.log("TEST A " + startStationsVar + " this is test of var stations = metroLines[ startLine ]");
-      for (var i = 0; i < startStationsVar.length; i++) {
+      for (var i = 0; i < startStationsVar.length; i++)
         if (startStation === startStationsVar[i])
-        console.log(startStationsVar[i] + " is on " + [startLine])
-      }
       var pureStartIndex = metroLines[startLine].indexOf(startStation)
       var startIndex = (pureStartIndex + 1) //+ 1 so you dont rprint the start station
       console.log ("Index number " + pureStartIndex + " of " + startLine);
@@ -65,7 +63,7 @@ var planTrip = function(startLine, startStation, destLine, destStation) {
          console.log(startStationsVarforUS[i] + " is on " + [destLine])}
          var pureStartIndexforUS = metroLines[destLine].indexOf("Union Square")
          var startIndexforUS = (pureStartIndexforUS + 1) //+ 1 so you dont rprint the start station
-         console.log ("Start Index number " + pureStartIndex + " of " + destLine);
+         console.log ("Union Square is number " + pureStartIndex + " of " + destLine);
 
    var destStationsVar = metroLines[ destLine ];
      console.log("TEST B " + destStationsVar + " this is test of var stations = metroLines[ destLine ]");
@@ -74,8 +72,6 @@ var planTrip = function(startLine, startStation, destLine, destStation) {
          console.log(destStationsVar[i] + " is on " + [destLine])}
          var pureDestIndex = metroLines[destLine].indexOf(destStation);
          var destIndex = (metroLines[destLine].indexOf(destStation) - 1) //-1 so you dont reprint the end station
-         console.log ("Union Square Index number " + pureDestIndex + " of " + destLine);
-
     {
       var listOfStationsPassedJourneyA = startStationsVar.splice(startIndexREAL,([pureDestIndexforUS]-1))
       console.log("You must travel through the following stops on the " + startLine + ": " + listOfStationsPassedJourneyA)
@@ -85,7 +81,7 @@ var planTrip = function(startLine, startStation, destLine, destStation) {
     {
       var listOfStationsPassedJourneyB = startStationsVar.splice([pureStartIndexforUS],[destIndex])
       console.log("Your journey continues through the following stops on the " + destLine + ": " + listOfStationsPassedJourneyB + " and " + destStation)
-      var numStopsJourneyB = pureStartIndexforUS - pureDestIndex;
+      var numStopsJourneyB = pureDestIndex - pureStartIndexforUS;
       console.log("JOURNEY B TEST There are " + numStopsJourneyB + " for Journey B")
       var numStops = (numStopsJourneyA + numStopsJourneyB)
       console.log("There are " + numStops + " stops in total")
@@ -102,4 +98,4 @@ var planTrip = function(startLine, startStation, destLine, destStation) {
 // console.log(listOfStations)
 // planTrip("lineN", "34th", "lineN", "8th");
 
-planTrip("lineN", "34th", "lineL", "Astor Place");
+planTrip("lineN", "34th", "lineL", "1st");

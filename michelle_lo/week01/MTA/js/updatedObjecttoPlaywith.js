@@ -9,6 +9,7 @@ var metroLines = {
   line6: ["Grand Central", "33rd", "28th", "23rd", "Union Square","Astor Place"]
 };
 
+
 //to convert metro object to an array
 var metroLinesArr = Object.keys(metroLines).map(function (key) { return metroLines[key]; });
 
