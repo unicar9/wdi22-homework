@@ -24,6 +24,7 @@ var guessLetter = function (n) {
   }
 
   if (!letterFound) {
+  	console.log('Sorry, try again.')
     reward -= Math.floor(Math.random() * 100) + 1;
   }
 
