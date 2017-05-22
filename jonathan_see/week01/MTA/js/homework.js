@@ -60,7 +60,7 @@ var planTrip = function (lineStart, startStop, lineEnd, endStop) {
   }
 }
 }
-    if ((startStop < US) && (US < end)Stop) { // US=UnionSquare still figuring out how to put in var
+    if ((startStop < US) && (US < endStop) { // US=UnionSquare still figuring out how to put in var
 
       var unionSquare = trainLines.N.indexOf("Union Square") || trainLines.L.indexOf("Union Square") || trainLines.6.indexOf("Union Square");
 

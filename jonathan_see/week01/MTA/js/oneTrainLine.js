@@ -13,9 +13,9 @@
 // // "7 stops in total."
 
 var trainLines = {
-  LineN: ["Time Square", "34th", "28th-N", "23rd-N", "Union Square", "8th"],
-  LineL: ["8th", "6th", "Union Square", "3rd", "1st"],
-  Line6: ["Grand Central", "33rd", "28th-6", "23rd-6", "Union Square", "Astor Place"]
+  lineN: ["Time Square", "34th", "28th-N", "23rd-N", "Union Square", "8th"],
+  lineL: ["8th", "6th", "Union Square", "3rd", "1st"],
+  line6: ["Grand Central", "33rd", "28th-6", "23rd-6", "Union Square", "Astor Place"]
 }
 
 var planTrip = function (lineStart, startStop, lineEnd, endStop) {
@@ -25,7 +25,7 @@ var planTrip = function (lineStart, startStop, lineEnd, endStop) {
   var endIndex = endLine.indexOf(endStop);
 
   if (startLine === endLine) {
-    
+
   if (startIndex === endIndex) {
 	console.log("Invalid!");
   } else if (startIndex < endIndex) {
@@ -44,5 +44,5 @@ var planTrip = function (lineStart, startStop, lineEnd, endStop) {
   }
 }
 }
-planTrip("LineN", "Time Square", "23rd-N");
-planTrip("LineN", "23rd-N", "Time Square");
+planTrip("lineN", "Time Square", "lineN""23rd-N");
+planTrip("lineN", "23rd-N", "lineN", "Time Square");
