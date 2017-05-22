@@ -13,24 +13,15 @@ var singleLineTrip = function (singleLine, startStation, endStation) {
   var stops = lines[singleLine];
   var startStationIndex = stops.indexOf(startStation);
   var endStationIndex = stops.indexOf(endStation);
-  var journey = [];
 
-  if ( startStationIndex === endStationIndex ) {
+  if (endStationIndex < startStationIndex) {
 
-     console.log("Error, Start and End Stations the same!");
-
-  } else if (endStationIndex < startStationIndex) {
-
-    journey = stops.slice(endStationIndex, startStationIndex + 1).reverse();
-
+    return stops.slice(endStationIndex, startStationIndex + 1).reverse();
 
   } else {
 
-    journey = stops.slice(startStationIndex, endStationIndex + 1 );
-    // console.log(journey);
-
+    return stops.slice(startStationIndex, endStationIndex + 1 );
   }
-  return journey;
 };
 
 var tripItinerary = function (startLine, startStation, endLine, endStation) {
@@ -47,6 +38,7 @@ var tripItinerary = function (startLine, startStation, endLine, endStation) {
 
    } else {
      firstLeg = singleLineTrip(startLine, startStation, endStation);
+     console.log("Your total stops will be " + firstLeg.join(", "));
    }
 
 };
