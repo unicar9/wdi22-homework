@@ -64,13 +64,17 @@ var makeTransfer = function (transferToAccount, transferAmount, account) {
        account.currentBalance -= parseInt(transferAmount);
        accounts[i].currentBalance += parseInt(transferAmount);
        alert("Transfer to " + accounts[i].ownerName + " successful! Your new balance is: " + account.currentBalance);
+       if (accounts[i].ownerName === "Luke Hammer"){
+         var audio = new Audio("Hammerpants.mp3");
+         audio.play();
+        }
        console.log(accounts);
        break;
      }
   }
-}
+};
 
-var makeDeposit = function (depositAmount, account) {
+var makeDeposit = function(depositAmount, account) {
   console.log("===>" + depositAmount, account);
 
   account.currentBalance += parseInt(depositAmount);
@@ -79,7 +83,7 @@ var makeDeposit = function (depositAmount, account) {
   // console.log("This account has been received a deposit of " + account.currentBalance);
 };
 
-var makeWithdrawal = function (withdarawalAmount, account) {
+var makeWithdrawal = function(withdarawalAmount, account) {
   if (account.currentBalance - withdarawalAmount > 0) {
     account.currentBalance -= parseInt(withdarawalAmount);
     alert("Current balance is now: " + account.currentBalance);
