@@ -1,0 +1,116 @@
+/*
+Project Name: Ecard.ly
+Client: General Assembly
+Author: Christopher Castig | @castig
+Developer @GA in NYC
+*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+body {
+  background-color: lightgrey;
+
+}
+
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+header {
+  background-color: red;
+  background-repeat: repeat-y;
+  background-image: url("/images/background.jpeg");*/
+  width:100%;
+  height:150px;
+  display:block;
+}
+
+h2 {
+  font-size: 8pt;
+  padding:20px;
+
+
+
+}
+
+#ecardcontainer {
+
+  width:800px;
+  height:410px;
+  background-color:white;
+  position: absolute; /* or absolute */
+  top: 30%;
+  left: 15%;
+
+}
+
+
+
+
+
+
+
+
+}
+
+#download {
+  color:red;
+
+}
+
+.maintext {
+
+  font-size:6.5pt;
+}
+
+#logocontainer {
+  position:absolute;
+  top:10px;
+  padding:0 45%;
+
+
+}
+
+#logo {
+  /*margin: 0 50px;*/
+
+  width:180px;
+  height:180px;
+  z-index:2;
+
+}
+
+#main {
+  position: absolute; /* or absolute */
+  top: 30%;
+  left: 15%;
+
+
+}
+
+#mainpic {
+  float:left;
+  width:520px;
+  height:350px;
+  /*position:absolute;
+  left:2%;
+  top:16%;
+  float:left*/
+
+}
