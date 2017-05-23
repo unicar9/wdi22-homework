@@ -1,0 +1,132 @@
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: arial;
+}
+main {
+  flex: 1;     /* this is the key; consumes all available height */
+  background: #E6E6E6;
+}
+header {
+  padding-left: 40px;
+  height: 54px;
+  background: #010101;
+}
+footer {
+  height: 100px;
+  background: #0E0E0E;
+}
+* {
+  margin: 0;
+}
+
+nav ul {
+  color:#C9CAC8;
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom:10px;
+
+
+}
+
+nav li {
+  font-size: 10px;
+  display: inline;
+  padding:5px;
+  padding-top: 20px;
+
+}
+
+.logo {
+  width:25%;
+  height:25%;
+  padding-top: 12px;
+  padding-left: 80px;
+}
+
+#mainimg {
+  width:80%;
+  height:40%;
+  padding:0 80px;
+
+}
+
+p {
+  font-size: 12px;
+
+
+}
+
+#textbox {
+  width:400px;
+  height:5px;
+  display: inline-block;
+
+  padding:30px 80px;
+
+}
+
+.box {
+  display: inline;
+  padding:20px 50px 50px 50px;
+
+
+}
+
+#imagecontainer {
+  display: flex;
+  flex-direction: row;
+
+
+}
+
+#imagecontainer img {
+  width:140px;
+  height:70px;
+  border: #E2E2E2 solid 4px;
+  position: absolute;
+
+
+
+
+}
+
+.buy {
+  position: absolute;
+  bottom:300px;
+  right:50px;
+  width:100px;
+  height:25px;
+  float:right;
+
+
+}
+
+h2 {
+  font-size:15px;
+  font-weight:200;
+
+
+}
+
+.imgtext {
+  font-size:8px;
+  padding-top: 80px;
+
+}
+
+.readmore {
+  font-size:7px;
+  padding-top: 8px;
+  color:#84B5E7;
+  transition: 0.5s all ease-in-out;
+
+}
+
+.readmore:hover {
+  cursor:pointer;
+  color:red;
+}
