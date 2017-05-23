@@ -1,38 +1,106 @@
-// var bankAccounts = [
-//       {accountName: "John Smith",
-//         balance: 4,
-//       },
+//luke's walk through bank
+// bank{
+//   - array of accounts
+//   each account has:
+//     - name
+//     - balance
+// addAccount():name
+//     -takes name and creates new object in our accounts array
+// deposit():name amount
+// - find the acount with the specified name
+// - add the specified balance to that account
+// - return an error if the account does not exist
 //
-//       {accountName: "Jane Doe",
-//         balance: 70000,
-//       },
-//
-//       {accountName: "George Bush",
-//         balance: 2000,
-//       }
-//     ];
-//
-// for (var i = 0; i < bankAccounts.length; i++) {
-//   var bankTry = bankAccounts[i];
-//
-//   var accountName2 = bankTry.accountName;
-//   var balance2 = bankTry.balance;
-//
-// console.log ("there is $" + balance2 + " in " + accountName2 + "'s account" );
-//
+
+console.log('Welcome to the FAI Bank');
+//out main bank object
+var bank = {
+
+  accounts: [
+    {name:"Max", balance: 1000.00}
+],
+
+getAccount: function  (name){
+  for (var i = 0; i < this.accounts.length; i++) {
+    var currentAccount = this.accounts[i];
+    if(currentAccount.name === name){
+      return currentAccount;
+    }
+  }//for
+  return false;
+},
+
+addAccount: function (name){
+  var newAccount = {
+    name = name,
+    account = 0.00
+  };
+
+    this.accounts.push({name: name, balance: 0.00});
+  console.log(this.accounts);
+
+}//add account
+
+};
+bank.addAccount("edgy");
+
+console.log('get account("max"):'bank.getAccount);
+
+// 'type of str'//when put into console e.g "number" shown as a string
 // }
-// //if blocks don't need; after }
-// var newAccount = function (x,y) {bankAccounts[bankAccounts.length] = {accountName: x, balance: y}}
-//
-// newAccount("Sally", 12 );
-//
-// var transfer = function (z) {
-//   if (z < bankAccounts.balance) {
-//     var newRich = (bankAccounts[2].balance = bankAccounts[2].balance+z)
-//     var newPoor = (bankAccounts[0].balance = bankAccounts[0].balance-z)}
-//
-//   else if (z > bankAccounts[0].balance) {
-//   console.log("Screw You! Eat the Rich!");}
+
+// if somehting occurs enough, make it a function??
+
+
+
+
+var bankAccounts = [
+      {accountName: "John Smith",
+        balance: 4,
+      },
+
+      {accountName: "Jane Doe",
+        balance: 70000,
+      },
+
+      {accountName: "George Bush",
+        balance: 2000,
+      }
+    ];
+
+    // better format (and nest?):
+    //
+    // accounts: {
+    //   "Max":100.00
+    //   "edgey":0
+    // },
+
+
+    }
+
+    // whole thing as one big object ('bank') bank.accounts as key with array as values
+
+for (var i = 0; i < bankAccounts.length; i++) {
+  var bankTry = bankAccounts[i];
+
+  var accountName2 = bankTry.accountName;
+  var balance2 = bankTry.balance;
+
+console.log ("there is $" + balance2 + " in " + accountName2 + "'s account" );
+
+}
+//if blocks don't need; after }
+var newAccount = function (x,y) {bankAccounts[bankAccounts.length] = {accountName: x, balance: y}}
+
+newAccount("Sally", 12 );
+
+var transfer = function (z) {
+  if (z < bankAccounts.balance) {
+    var newRich = (bankAccounts[2].balance = bankAccounts[2].balance+z)
+    var newPoor = (bankAccounts[0].balance = bankAccounts[0].balance-z)}
+
+  else if (z > bankAccounts[0].balance) {
+  console.log("Screw You! Eat the Rich!");}
 //
 // }
 //
@@ -131,19 +199,19 @@
 //   if (triangle.sideA === triangle.sideB && triangle.sideA === triangle.sideC) {console.log('eqo');}
 //
 
-
-
-  var DogFactory = function (name, breed) {
-      var dog = {};
-
-      dog.name = name;
-      dog.breed = breed;
-
-      return dog;
-  };
-
-  var tamaskan = DogFactory("Tammy", "Tamaskan");
-  var buddy = DogFactory("Buddy", "Labrador");
+  //
+  //
+  // var DogFactory = function (name, breed) {
+  //     var dog = {};
+  //
+  //     dog.name = name;
+  //     dog.breed = breed;
+  //
+  //     return dog;
+  // };
+  //
+  // var tamaskan = DogFactory("Tammy", "Tamaskan");
+  // var buddy = DogFactory("Buddy", "Labrador");
 
   // what in console
 
@@ -188,3 +256,35 @@
 // //   sideC: 4
 // // };
 // // Raw
+var triangle = {
+  sideA: 4,
+  sideB: 4,
+  sideC: 4
+};
+
+
+var isEquilateral = function (sideA,sideB,sideC) {
+  if (triangle.sideA === triangle.sideB && triangle.sideA === triangle.sideC)
+    console.log('eqo');
+};
+
+//factory
+var TriangleFactory = function (a,b,c) {
+  var tri = {};
+  tri.sideA = a;
+  tri.sideB = b;
+  tri.sideC = c;
+return tri;
+// what do i use this return for
+};
+
+
+
+// // constructor
+// var Triangle = function (a, b, c) {
+//   this.sideA = a;
+//   this.sideB = b;
+//   this.sideC = c;
+// }
+//
+// var factoryTriangle = TriangleFactory(5,5,5);
