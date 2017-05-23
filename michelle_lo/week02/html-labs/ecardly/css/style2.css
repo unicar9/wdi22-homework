@@ -1,0 +1,81 @@
+
+body {
+  text-align: center;
+  background-color: #d6d6d6;*/
+  color: #000000;
+  background-image: url("http://i.imgur.com/vOo90Dg.jpg");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: top;
+
+ }
+
+.headimage {
+
+ }
+
+#page-wrap {
+  text-align: center;
+  width: 800px;
+  margin: 0 auto;
+}
+.container {
+  width: 940px;
+  text-align: center;
+  background-color: white;
+  width: 700px;
+  /*height: 350px;*/
+  overflow:auto;
+}
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.ecard {
+  text-align: left;
+  width: 500px;
+  float: left;
+  padding: 10px;
+  display: inline-block;
+
+}
+
+.text {
+  background-color: pink;
+  display: inline-block;
+  float:right;
+}
+
+p {
+  font-size: 12px;
+  text-align: justify;
+  padding:15px;
+  margin-left: 10px;
+
+}
+
+#main {
+  width: 640px
+  /*float: right;*/
+}
+
+#sidebar {
+  width: 280px;
+}
