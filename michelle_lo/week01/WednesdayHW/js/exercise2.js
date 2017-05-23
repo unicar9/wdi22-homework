@@ -11,27 +11,23 @@ var prize = 100
 var prizeRound = Math.random().toFixed(2)*100
 
 var guessLetter = function(guess){
-  for (var i = 0; i < answerWord.length; i++) {{
+  for (var i = 0; i < answerWord.length; i++) {
     if (guess === answerWord[i]){
-        {runningResult[i] = guess;
-          prize += prizeRound;
-        }
-        console.log('Successs: ' + runningResult.join('') + ' Your current balance is $' + prize);
-        alert ("You got a letter!");}
-      };
+      {runningResult[i] = guess;
+        prize += prizeRound;
+      }
+      console.log('Successs: ' + runningResult.join('') + ' Your current balance is $' + prize);
+      alert ("You got a letter!");}
+} //for
+    if (answerWord.toString('') !== runningResult.toString('')){
+      prize -= 10;
+      console.log("That's not it, keep going. Your current balance is $" + prize);
+      alert ('have another go')
+    } else {
+      console.log('You did it! You won $' + prize);
+      alert ('Great work!');
     }
-    {
-     if (answerWord.toString('') !== runningResult.toString('')){
-        prize -= 10;
-        console.log("That's not it, keep going. Your current balance is $" + prize);
-        alert ('have another go')}
-    ;}
-    {
-     if (answerWord.toString('') === runningResult.toString('')){
-        console.log('You did it! You won $' + prize);
-        alert ('Great work!')}
-    ;}
-    ;}
+  };
 guessLetter('X');
 guessLetter('F');
 guessLetter('J');
