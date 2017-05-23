@@ -1,4 +1,3 @@
-
 // Credit Card Validation
 //
 // You're starting your own credit card business. You've come up with a new way to validate credit cards with a simple function called validateCreditCard that returns true or false.
@@ -39,35 +38,42 @@
 // 1111-1111-1111-1110
 // 6666-6666-6666-6661
 
+
 var removeDash = function() {
   ccArray.splice(4,1);
   ccArray.splice(8,1);
   ccArray.splice(12,1);
+  console.log(ccArray)
   return;
 }
 
-var total = "0";
+var total = 0;
 
 var sumCheck = function() {
   for (i = 0; i < ccArray.length; i++) {
     currentItem = parseInt(ccArray[i]);
     total += currentItem;
-    // if (total < 16) {
-    //   console.log("Sum of digits is less than 16.")
-    console.log(total);
-    }
-    if (total < 16) {
-      console.log("Sum of digits is less than 16.")
+  }
+
+  if (total < 16) {
+    console.log("ERROR Credit card digits sum to less than 16");
+  } else {
+    console.log("Credit card digits sum to greater than 16")
   }
 }
-console.log(total);
+
+var invalidCharacters = function () {
+  ccArray = ccArray.replace(/\D/g,'');
+}
 
 var validateCreditCard = function(ccNumber) {
   ccArray = ccNumber.split("")
     if (ccArray.length === 19) {
       removeDash();
-      sumCheck();
+      invalidCharacters();
       console.log(ccArray);
+      sumCheck();
+      invalidCharacters();
     } else {
       console.log("Invalid length.")
     }
@@ -76,7 +82,6 @@ var validateCreditCard = function(ccNumber) {
 var duplicates = function() {
   for (var i = 1; i < length.ccArray; i++) {
     if (ccArray[i] == ccArray[i]-1 ) {
-      console.log('on all 4s');
     }
   }
 }
@@ -97,4 +102,4 @@ var finalOdd = function () {
 //            return inputArray.indexOf(item) == index;
 //     });
 
-validateCreditCard('1111-1111-1111-1111')
+validateCreditCard('1111-111c-1111-1111')

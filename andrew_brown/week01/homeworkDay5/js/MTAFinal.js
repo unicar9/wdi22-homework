@@ -51,6 +51,8 @@ var subway = {
 
 var myTrip = [];
 
+var transferStation = "Union Square";
+
 console.log("You must first travel through the following stations:");
 
 var planTrip = function( startLine, endLine, startStation, endStation ) {
@@ -73,17 +75,16 @@ var singleLine = function ( startLine, startStation, endStation ) {
     if ( start < end ) {
       currentTrip = myTrip.slice( start, ( end + 1 ));
     } else {
-      currentTrip = myTrip.slice( end, ( start + 1 ));
-      currentTrip = currentTrip.reverse();
+      currentTrip = myTrip.slice( end, ( start + 1 )).reverse();
     }
     console.log(currentTrip.join(', '));
   return currentTrip;
 };
 
 var twoLines = function ( startLine, endLine, startStation, endStation ) {
-  singleLine ( startLine, startStation, "Union Square" );
+  singleLine ( startLine, startStation, transferStation );
   console.log("Then change at Union Square and continue your journey through along the " + endLine + " through: ");
-  singleLine ( endLine, "Union Square", endStation );
+  singleLine ( endLine, transferStation, endStation );
 };
 
 planTrip ( "nLine", "sixLine", "Times Square", "Grand Central" );
