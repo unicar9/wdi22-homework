@@ -56,6 +56,11 @@ body {
     height: auto;
 }
 
+.photobanner img {
+    width: 100%;
+    height: auto;
+    float: right;
+}
 .w3-container {
   border: 1px solid white;
   display: inline-block;
