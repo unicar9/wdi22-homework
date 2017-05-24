@@ -1,0 +1,139 @@
+/*
+## Requirements
+
+- At least 3 pages (example: biography, trivia, hometown)
+- At least 1 Google Font
+- Whatever HTML and CSS you desire
+- Keep your code clean and DRY
+- Start working with semantic elements: http://html5doctor.com/lets-talk-about-semantics/
+- No Javascript! Even if you know how to use jQuery, see how far you can push this with pure HTML + CSS
+- Don't worry about responsiveness -- desktop resolution is fine
+
+## Your research should aim to reveal at least two things about each person:
+
+- Why I admire them
+- Something that I probably don't already know about them
+
+## Optional extras
+
+- Experiment with custom fonts, Font Awesome, Google Fonts etc.
+- Look into CSS3 animations
+- Try embedding media (YouTube or Vimeo video, Soundcloud, podcasts)
+- Try embedding a Google map (for their hometown and/or alma mater)
+*/
+
+body {
+background-color: #FFFEFF;
+}
+
+.container {
+  width:100%;
+  height: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  position:absolute;
+  display: inline-block;
+  top: 7%;
+  left: 50px;
+  padding-left: 30px;
+}
+
+.imageContainer {
+  top: 7%;
+  bottom: 0;
+  display: inline;
+  position: absolute;
+  right: 0px;
+  height:93%
+  width: 100%;
+}
+
+img {
+  bottom: 0;
+  height: 100%;
+  right: 0;
+}
+
+.top {
+  width: 100%;
+  height: 7%;
+  background-color: #054A91;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 3px 2px 3px #888888;
+}
+
+.left {
+  background-color: #F34213;
+  height: 93%;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: 7%;
+  box-shadow: 3px 0px 3px #888888;
+
+}
+
+.hfont {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+th {
+  align: center;
+}
+
+a:hover {
+  color: rgb(214, 214, 214);
+  transition: all 0.4s ease;
+}
+
+.content {
+  position:relative;
+  padding-top: -30px;
+  max-width: 700px;
+  width: 80%;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  line-height:150%;
+}
+
+li {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  line-height:150%;
+}
+
+table {
+  width: 40%;
+  right: 0;
+  position: absolute;
+  top: 20%;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  color: #FFFEFF;
+}
+
+.menuButton {
+  height: 97%;
+  top: 0;
+  left: 5px;
+  position: relative;
+}
+
+iframe {
+  top: 25%;
+  right: 25%;
+  position: relative;
+}
