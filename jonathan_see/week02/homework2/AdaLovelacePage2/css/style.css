@@ -17,6 +17,10 @@ a {
   padding: 20px;
 }
 
+a:hover {
+  background-color: rgb(164, 83, 149);
+}
+
 header {
   font-size: 65px;
   text-align: center;
