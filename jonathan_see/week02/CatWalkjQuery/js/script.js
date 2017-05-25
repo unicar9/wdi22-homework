@@ -1,29 +1,37 @@
+var $cat = $('.walkingCat');
 
-var cat = document.querySelector('img');
-cat.style.left = '0px';
+window.setInterval(function() {
 
-var catWalk = function() {
-  var oldLeft = parseInt(cat.style.left);
-  // console.log(oldLeft);
-  var newLeft = oldLeft + 10;
-  // console.log(newLeft);
-  cat.style.left = newLeft + 'px';
-  // console.log(cat.style.left);
-  window.setInterval(function() {
-    cat.setAttribute("width", cat.width += 2);
-  }, 100);
-};
+  var left = $cat.css('left'); // where left = 0px
+  left = parseInt(left); // converted to 0 w/o px
 
-window.setInterval(catWalk, 150);
+  // console.log(left);
 
-var catStop = function() {
-  cat.style.left = '200px';
-  if (cat.style.left >= 300) {
-    window.clearInterval()
+  $cat.css('left', (left + 10) + 'px'); //
+
+  if(left > window.innerWidth - $cat.width() ){
+  //  $cat.css('border', '10px solid red')
   }
-};
+}, 50);
 
-window.clearTimeout(100);
+// var $gasp = $("<h1>Meow!</h1>");
+//   $gasp.css("font-size", "24px");
+//   $("body").prepend($gasp);
+
+// var cat = document.querySelector('img');
+// cat.style.left = '0px';
+//
+// var catWalk = function() {
+//   var oldLeft = parseInt(cat.style.left);
+//   // console.log(oldLeft);
+//   var newLeft = oldLeft + 10;
+//   // console.log(newLeft);
+//   cat.style.left = newLeft + 'px';
+//   // console.log(cat.style.left);
+//   window.setInterval(function() {
+//     cat.setAttribute("width", cat.width += 2);
+//   }, 100);
+// };
 
 
 // var img = document.getElementsByTagName('img')[0];

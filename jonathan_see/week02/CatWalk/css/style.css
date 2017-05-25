@@ -1,5 +1,11 @@
+
 body {
   background-color: pink;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/ModelsCatwalk.jpg/300px-ModelsCatwalk.jpg);
+  background-size: cover;
+  length: 100px;
+  width: auto;
+  overflow: hidden;
 }
 
 img {
