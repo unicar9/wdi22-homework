@@ -20,6 +20,7 @@ float:right;
   width:140px;
   height:140px;
   float:left;
+  z-index: -1;
 }
 
 div>header {
