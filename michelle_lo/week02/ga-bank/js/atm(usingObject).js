@@ -65,44 +65,31 @@ $(document).ready(function () {
 
 
 // GUI
-
-//colorChange
-  var colorChange = function(accountType) {
-    if (bank.withdraw === 0){
-      if (accountType = "savingsAccount") {
-        var box = $('#savings-balance');
-        box.css('backgroundColor', 'red')
-      } else {
-          var box = $('#checking-balance');
-          box.css('backgroundColor', 'red')
-      }
-    } // closing if 0 bal
-  }//closing colorChange functions
-  // var savingsBalance = $('#savings-balance')
-  // screenBalance[0].innerHTML
-
-//I'm calling this function through the below variable... how come?
   var withdrawAmount = function(dollarWithdraw, accountType) {
-    // debugger;
-    if (accountType === "savingsAccount" ) {
-      $('#savings-balance')[0].innerHTML = bank.withdraw(dollarWithdraw, accountType);
-    } else if (accountType === "checkingAccount"){
-    $('#checking-balance')[0].innerHTML = bank.withdraw(dollarWithdraw, accountType);
-    } else {
-      console.log("wrong function");
+    bank.withdraw(dollarWithdraw, accountType);
+      $('#savings-balance')[0].innerHTML = bank.account.savingsAccount;
+      console.log('this is the current savings amount after the WD' + bank.account.savingsAccount);
+    $('#checking-balance')[0].innerHTML = bank.account.checkingAccount;
+    //colour check
+    if (bank.account.savingsAccount === 0) {
+      var $boxS = $('#savings-balance');
+      $boxS.css('backgroundColor', 'red')
     }
-    colorChange()
-  };
+     else if (bank.account.checkingAccount === 0) {
+      var $boxC = $('#checking-balance');
+      $boxC.css('backgroundColor', 'red')
+    }
 
+    };
+
+  //theoretically, this will be triggered by clicking 'deposit'
 
 var depositAmount = function(dollarDeposit, accountType) {
-  if (accountType === "savingsAccount" ) {
-    $('#savings-balance')[0].innerHTML = bank.deposit(dollarDeposit, accountType);
-  } else if (accountType === "checkingAccount"){
-  $ ('#checking-balance')[0].innerHTML = bank.deposit(dollarDeposit, accountType);;
-  } else {
-      console.log('wrong function');
-  }
+  bank.deposit(dollarDeposit, accountType);
+    $('#savings-balance')[0].innerHTML = bank.account.savingsAccount;
+    console.log(bank.account.checkingAccount);
+  $ ('#checking-balance')[0].innerHTML = bank.account.checkingAccount;;
+
 };
 
 
@@ -124,7 +111,7 @@ var depositAmount = function(dollarDeposit, accountType) {
 depositAmount(111, "savingsAccount");
   withdrawAmount(112, "checkingAccount");
   withdrawAmount(112, "checkingAccount");
-
+//
   // depositAmount(444, "checkingAccount");
 //
 // bank.withdraw(10,"savingsAccount");
