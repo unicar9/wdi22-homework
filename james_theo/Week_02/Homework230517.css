@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(160, 161, 190)
+
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 80px;
+  border: 5px;
+  margin: 30px auto;
+  width: 50%;
+  text-align: center;
+  background-color: rgb(195, 192, 198))
+}
+
+p {
+  border: 10px;
+  margin: 20px auto;
+  width: 50%;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+iframe {
+  display: block;
+  margin: auto;
+}
+
+a {
+  margin: 40px auto;
+  text-align: center;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  text-decoration: none;
+  color: rgb(14, 11, 1)
+}

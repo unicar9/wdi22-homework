@@ -1,0 +1,85 @@
+/*font-family: 'Atomic Age', cursive;
+font-family: 'Bungee Outline', cursive;
+font-family: 'Droid Sans', sans-serif;
+font-family: 'Inconsolata', monospace;
+font-family: 'Lora', serif;*/
+
+@import url('https://fonts.googleapis.com/css?family=Atomic+Age|Bungee+Outline|Droid+Sans|Inconsolata|Lora');
+
+* {
+  margin: 0;
+}
+
+span {
+  font-weight: bold;
+  color: black;
+}
+
+.heroimage {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+}
+
+.topnav a {
+  text-decoration: none;
+  color: white;
+  font-family:'Atomic Age', cursive;
+  font-size: 15pt;
+  padding: 50px;
+  margin-top: 20px;
+
+}
+
+a:hover {
+  color: grey;
+}
+
+.section {
+  font-family: 'Droid Sans', sans-serif;
+  width: 100%;
+  padding-top:10px;
+  color: #333635;
+}
+
+.sectionimages {
+  height: auto;
+  width: 300px;
+  margin-left: 45%;
+  margin-bottom: 20px;
+}
+
+.titles {
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  color: #333635;
+  margin-left: 49%;
+  margin-bottom: 5px;
+  margin-top: 10px;
+
+}
+
+.blurbs {
+  display: inline-block;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  color: black;
+  text-shadow: 2px 2px 3px white;
+}
+
+#parchment {
+    background: url('https://s-media-cache-ak0.pinimg.com/originals/24/c0/93/24c0937b6dc6f2e119d13f6f0f1a2a3a.jpg');
+    background-size: 100%;
+    background-repeat: repeat-y;
+    bottom-margin: 50px;
+}
