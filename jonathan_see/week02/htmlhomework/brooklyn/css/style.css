@@ -1,0 +1,48 @@
+* {
+  font-family: "Times New Roman";
+}
+
+header {
+  font-size: 40px;
+  color: grey;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 28px;
+  color: grey;
+}
+
+h2 {
+  font-size: 20px;
+  color: #3185af;
+}
+
+a {
+  text-decoration: none;
+  color: #3185af;
+}
+
+p {
+  color: grey;
+}
+
+h2.img {
+  float: left;
+}
+
+footer {
+  color: grey;
+}
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/

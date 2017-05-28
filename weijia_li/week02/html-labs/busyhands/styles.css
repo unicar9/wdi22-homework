@@ -1,0 +1,19 @@
+
+body {
+  background-image: url("images/bg_body.jpg");
+  background-size: cover;
+}
+.wrapper {
+  background: url(images/bg_wrapper.png);
+  background-repeat: repeat-x;
+  top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+}
