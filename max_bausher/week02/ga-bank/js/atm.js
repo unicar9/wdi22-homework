@@ -24,7 +24,7 @@ var bank = {
     var currentBalance = this.balances[type];
     // debugger;
     if ( amount > total || this.balances['checking'] && this.balances['savings'] < 0){
-  
+
       return false;
 
     } else if ( amount < 0){
@@ -60,7 +60,7 @@ $( document ).ready(function() {
 
   $( "#checking-deposit" ).click(function() {
 
-    var inputAmount = parseInt( $('#checking-amount').val() )
+    var inputAmount = parseFloat( $('#checking-amount').val() )
     var transaction = bank.deposit( inputAmount, "checking" );
     if ( transaction === false ){
       $('#checking').css('background-color', 'red')
@@ -75,7 +75,7 @@ $( document ).ready(function() {
 
   $( "#checking-withdraw" ).click(function() {
 
-    var inputAmount = parseInt( $('#checking-amount').val() )
+    var inputAmount = parseFloat( $('#checking-amount').val() )
     var transaction = bank.withdrawal( inputAmount, "checking" );
     if (transaction === false ){
       $('#checking').css('background-color', 'red');
@@ -89,7 +89,7 @@ $( document ).ready(function() {
 
   $( "#savings-deposit" ).click(function() {
 
-    var inputAmount = parseInt( $('#savings-amount').val() )
+    var inputAmount = parseFloat( $('#savings-amount').val() )
     var transaction = bank.deposit( inputAmount, "savings" );
     if ( transaction === false ){
       $('#savings').css('background-color', 'red')
@@ -102,13 +102,13 @@ $( document ).ready(function() {
 
   $( "#savings-withdraw" ).click(function() {
 
-    var inputAmount = parseInt( $('#savings-amount').val() )
+    var inputAmount = parseFloat( $('#savings-amount').val() )
     var transaction = bank.withdrawal( inputAmount, "savings" );
     if (transaction === false ){
       $('#savings').css('background-color', 'red');
     } else {
-      $('#savings-balance').text( bank.balances.savings );
-      $('#checking-balance').text( bank.balances.checking);
+      $('#savings-balance').text("$" + bank.balances.savings );
+      $('#checking-balance').text("$" + bank.balances.checking);
       $('#savings').css('background-color', '#6C9A74')
 
     }
