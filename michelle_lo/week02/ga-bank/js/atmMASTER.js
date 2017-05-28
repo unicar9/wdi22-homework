@@ -1,9 +1,9 @@
-
+//could be way dry-er, but it works!
 
 $(document).ready(function () {
   var bank = {
-    account: {checkingAccount: 0,
-              savingsAccount: 0
+    account: {checkingAccount: 0.0,
+              savingsAccount: 0.0
               }, // keep track of acc balance
 
     deposit: function(dollarDeposit, accountType){
@@ -34,19 +34,20 @@ $(document).ready(function () {
           if (accountType === "checkingAccount") {
             bank.account.savingsAccount -= runningBalanceOfWD; // ie take savings
             newBalance = bank.account.savingsAccount;
-            console.log("I tried to WD from" + accountType + " but it ran out of money, so i'm WD the remainder, which is " + runningBalanceOfWD + " from Savings. The new balance of Savings is" + newBalance);
+            alert("You tried to withdraw from" + accountType + " but it ran out of money, so I'm withdrawing the remainder, which is " + runningBalanceOfWD + " from Savings. The new balance of Savings is " + newBalance);
             console.log ('line 38 newBalance = '+ newBalance)
             return newBalance;
           } else { //ie where you dont have sufficient funds in savings account
             bank.account.checkingAccount -= runningBalanceOfWD; // ie take savings
             newBalance = bank.account.checkingAccount;
-            console.log("I tried to WD from" + accountType + " but it ran out of money, so i'm WD the remainder, which is " + runningBalanceOfWD + " from Checking. The new balance of Checking Account is" + newBalance);
+            alert("You tried to withdraw from" + accountType + " but it ran out of money, so I'll withdrawl the remainder, which is " + runningBalanceOfWD + " from Checking. The new balance of your Checking Account is " + newBalance);
             console.log ('line 44 newBalance = '+ newBalance)
             // debugger;
             return newBalance;
           }
         } else {
           console.log ('what are you doing??')
+          alert('what are you doing?')
           newBalance = bank.account[accountType];
           console.log( bank.account[accountType]);
           return newBalance;
@@ -66,100 +67,76 @@ $(document).ready(function () {
 
 // GUI
 
-// //colorChange
-//   var colorChange = function(accountType) {
-//     if (bank.withdraw === 0){
-//       if (accountType = "savingsAccount") {
-//         var box = $('#savings-balance');
-//         box.css('backgroundColor', 'red')
-//       } else {
-//           var box = $('#checking-balance');
-//           box.css('backgroundColor', 'red')
-//       }
-//     } // closing if 0 bal
-//   }//closing colorChange functions
-//   // var savingsBalance = $('#savings-balance')
-//   // screenBalance[0].innerHTML
+// test code - WORKS
+// $( "#checking-deposit" ).click(function() {
+//   alert( "Handler for .click() called." );
+// });
 
-//theoretically, this will be triggered by clicking 'withdraw'
+// var dollarDeposit = document.getElementById('checking-amount').value;
+// dollarDeposit = parseInt(dollarDeposit);
 
-// GUI
-  var withdrawAmount = function(dollarWithdraw, accountType) {
-    bank.withdraw(dollarWithdraw, accountType);
-    // if (accountType === "savingsAccount" ) {
-      $('#savings-balance')[0].innerHTML = bank.account.savingsAccount;
-      console.log('this is the current savings amount after the WD' + bank.account.savingsAccount);
-    // } else if (accountType === "checkingAccount"){
-    $('#checking-balance')[0].innerHTML = bank.account.checkingAccount;
-    //colour check
-    if (bank.account.savingsAccount === 0) {
-      var $boxS = $('#savings-balance');
-      $boxS.css('backgroundColor', 'red')
-    }
-     else if (bank.account.checkingAccount === 0) {
-      var $boxC = $('#checking-balance');
-      $boxC.css('backgroundColor', 'red')
-    }
-
-    };
-
-  //theoretically, this will be triggered by clicking 'deposit'
-
-var depositAmount = function(dollarDeposit, accountType) {
+//DEPOSITS
+//checking deposits
+$( "#checking-deposit" ).click(function(dollarDeposit, accountType) {
+  var dollarDeposit = document.getElementById('checking-amount').value;
+  dollarDeposit = parseInt(dollarDeposit);
+  accountType = "checkingAccount";
   bank.deposit(dollarDeposit, accountType);
-  // if (accountType === "savingsAccount" ) {
-  //   console.log(bank.account.savingsAccount)
-    $('#savings-balance')[0].innerHTML = bank.account.savingsAccount;
-  // } else if (accountType === "checkingAccount"){
-    console.log(bank.account.checkingAccount);
-  $ ('#checking-balance')[0].innerHTML = bank.account.checkingAccount;;
-//   } else {
-//       console.log('wrong function');
-//   }
-};
+  $ ('#checking-balance')[0].innerHTML = bank.account.checkingAccount;
+  colourCheck();
+  console.log('the button was clicked. dollarDeposit = ' + dollarDeposit + "the account impacted was: " + accountType)
+  })
 
 
-    // else if (transactionType === "withdraw" && accountType === "checkingAccount");
-    //   {$('#savings-balance')[0].innerHTML = bank.deposit(dollarWithdraw, accountType);
-    //   }
+//savings deposits
+$( "#savings-deposit" ).click(function(dollarDeposit, accountType) {
+  var dollarDeposit = document.getElementById('savings-amount').value;
+  dollarDeposit = parseInt(dollarDeposit);
+  accountType = "savingsAccount";
+  bank.deposit(dollarDeposit, accountType);
+  $ ('#savings-balance')[0].innerHTML = bank.account.savingsAccount;
+  colourCheck();
+  console.log('the button was clicked. dollarDeposit = ' + dollarDeposit + "the account impacted was: " + accountType)
+  })
 
+//WITHDRAWAL
 
-    // var boxInput = bank.withdraw()
-    // savingsBalance[0].innerHTML = boxInput ;
-    // var boxInput = bank.withdraw();
-  // }
-  //
-  // var boxInput = bank.withdraw();
-  // console.log(boxInput);
-//functions being called to test
+//colour change
+var colourCheck = function( ) {
+  var $boxS = $('#savings-balance');
+  var $boxC = $('#checking-balance');
+  if (bank.account.savingsAccount === 0) {
+    $boxS.css('backgroundColor', 'red')
+  }
+   else if (bank.account.checkingAccount === 0) {
+    $boxC.css('backgroundColor', 'red')
+  } else {
+    $boxC.css('backgroundColor', '#E3E3E3');
+    $boxS.css('backgroundColor', '#E3E3E3')
+  }
+}
+//checking withdrawal
+$( "#checking-withdraw" ).click(function(dollarDeposit, accountType) {
+  var dollarDeposit = document.getElementById('checking-amount').value;
+  dollarDeposit = parseInt(dollarDeposit);
+  accountType = "checkingAccount";
+  bank.withdraw(dollarDeposit, accountType);
+  $ ('#checking-balance')[0].innerHTML = bank.account.checkingAccount;
+  $ ('#savings-balance')[0].innerHTML = bank.account.savingsAccount;
+  colourCheck();
+  console.log('the button was clicked. dollarDeposit = ' + dollarDeposit + "the account impacted was: " + accountType)
+  })
 
-  depositAmount(34, "checkingAccount");
-depositAmount(111, "savingsAccount");
-  withdrawAmount(112, "checkingAccount");
-  withdrawAmount(112, "checkingAccount");
-//
-  // depositAmount(444, "checkingAccount");
-//
-// bank.withdraw(10,"savingsAccount");
-// colorChange();
-//
-// bank.withdraw(10,"checkingAccount");
-// colorChange();
+  $( "#savings-withdraw" ).click(function(dollarDeposit, accountType) {
+    var dollarDeposit = document.getElementById('savings-amount').value;
+    dollarDeposit = parseInt(dollarDeposit);
+    accountType = "savingsAccount";
+    bank.withdraw(dollarDeposit, accountType);
+    $ ('#savings-balance')[0].innerHTML = bank.account.savingsAccount;
+    debugger;
+    $ ('#checking-balance')[0].innerHTML = bank.account.checkingAccount;
+    colourCheck();
+    console.log('the button was clicked. dollarDeposit = ' + dollarDeposit + "the account impacted was: " + accountType)
+    })
 
-// updateAmount();
-// // colorChange();
-// bank.withdraw(10,"savingsAccount");
-//
-//   // bank.withdraw(110,"savingsAccount");
-//     // updateAmount();
-//     // colorChange();
-//
-//     bank.withdraw(10,"checkingAccount");
-//       colorChange();
-//       // updateAmount();
-
-
-  // to change balance on screen
-  // var screenBalance = $('#savings-balance');
-  //
   }); //end of .ready
