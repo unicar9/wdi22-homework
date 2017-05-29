@@ -1,0 +1,44 @@
+body {
+  background-image: url("https://68.media.tumblr.com/b59158de845445390abf221c24602435/tumblr_ob6mahtplz1v9h9zzo1_500.gif");
+  background-size: cover;
+}
+
+#button {
+  color: #ff00d0;
+  font-size: 20px;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top:100px;
+  left:100px;
+}
+
+#dancecat1 {
+  width: 0;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+
+#dancecat2 {
+  width: 0;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+
+#dancecat3 {
+  width: 0;
+  position: absolute;
+  top: 500px;
+  left: 500px;
+}
+
+#cat {
+  z-index: -1;
+}
+
+.dancecat {
+  z-index: -1;
+}
