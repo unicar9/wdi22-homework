@@ -1,0 +1,27 @@
+
+nav, a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 40px 0;
+  font-size: 20px;
+}
+
+all boxes, a {
+  background-color: white;
+  color: black;
+  line-height: 12px;
+}
+
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/

@@ -1,0 +1,31 @@
+
+body {
+  background: url(https://media.giphy.com/media/uVeSxnNK2W4vu/giphy.gif);
+  background-size: cover;
+  /*padding-top: 200px;*/
+  length: 100px;
+  width: auto;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+}
+
+.cryptKeeper {
+  top: 200px;
+}
+
+.shockedAudienceOne {
+  top: 600px;
+}
+
+.cameraFlashing {
+  top: 300px;
+  left: 1200px;
+}
+
+.shockedAudienceTwo{
+  top: 600px;
+  left: 1200px;
+}
