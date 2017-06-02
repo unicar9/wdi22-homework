@@ -1,0 +1,88 @@
+
+.date {
+  color: #87bdd8;
+}
+
+p {
+  color: #656565;
+  Font Size: 12px;
+	Line Height: 17px;
+	Font Family: "Times New Roman", serif;
+
+}
+
+.secondparagraph {
+  /*display: block;*/
+  color:
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+h1 {
+  color: #656565;
+  ali;
+}
+
+h3 {
+  color: #656565;
+
+}
+
+a {
+  display: block;
+  /*float: left;*/
+  color: #87bdd8;
+  text-decoration: none;
+
+}
+
+.newyork {
+  border: 5px solid #656565;
+  display: inline-block;
+  /*position: relative;
+  left: 12.3%;*/
+}
+
+.huffington {
+  border: 5px solid #656565;
+  display: inline-block;
+  /*position: relative;*/
+  /*left: 12.3%;*/
+}
+
+.lucky {
+  border: 5px solid #656565;
+  display: inline-block;
+  /*position: relative;
+  left: 12.3%;*/
+}
+
+.marie {
+  border: 5px solid #656565;
+  display: inline-block;
+  /*position: relative;
+  left: 12.3%;*/
+}
+
+.bigpic1 {
+  margin: 5px;
+  /*display: inline-block;*/
+  /*position: relative;
+  left: 250px;*/
+
+}
+
+.bigpic2 {
+   margin: 5px;
+  /*display: inline-block;*/
+  /*position: relative;
+  left: 250px;*/
+
+}
+
+.secondparagraph {
+  display: inline;
+}
