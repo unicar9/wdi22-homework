@@ -11,74 +11,9 @@
 // It should also figure out if there are any more letters that need to be guessed, and if not, it should congratulate the user for winning the game.
 // Pretend you don't know the word, and call guessLetter multiple times with various letters to check that your program works.
 
+// Noteworthy - because you didnt close out the if with an else the loop doesn't run for everything
 
-// variables for the words
-
-// var word = ["F", "O", "X"];
-//
-// var guess = ["_", "_", "_"];
-//
-// var guesses = [ ];  //store geusses
-//
-// //create geusses
-// var guessLetter = function (guessedLetter){
-// //iterate through the variable
-//
-//   for (var i = 0; i < guess.length; i++) {
-//
-//     guesses.push (geussedLetter);
-//
-//     if ( guessedLetter === word[i]) {
-//       console.log ("Correct, you've found a letter: " + word[i]){}
-//       geuss = word[i];
-//       else {
-//        console.log ("Incorrect, try again");
-//
-//     };
-//
-//   };
-//
-//
-//   // geusses to check
-//   guessLetter ("O")
-//   guessLetter ("D")
-//   guessLetter ("X")
-
-
-//NUGGET answer
-
-var word = ["F", "O", "X"];
-var guessedWord = ["_", "_", "_"];
-var guesses = [ ];
-
-var guessLetter = function ( letter ){
-
- guesses.push(letter);
-
- for (var i = 0; i < word.length; i++) {
-     if (word[i] === letter) {
-       console.log("That's correct, you found: " + letter);
-       guessedWord[i] = letter;
-       console.log("The word is: " + guessedWord);
-     } else {
-       // console.log("");
-     }
- }
-
- };
-// geusses to check
-guessLetter ("F");
-guessLetter ("O");
-guessLetter ("D");
-console.log("The guesses were: " + guesses);
-
-
-
-  // Comments
-
-  //it seemed to be iterating fine by itself however I am not sure if the answer I was getting was what it was meant to be.
-
-  // Wasn't sure if the first part was right. I wanted to make sure this was working before building on it further.
+// noteworthy - need to find out why my
 
   // Bonus: Make it more like Wheel of Fortune:
   //
@@ -86,18 +21,12 @@ console.log("The guesses were: " + guesses);
   // Every time a letter is guessed, generate a random amount and reward the user if they found a letter (multiplying the reward if multiple letters found), otherwise subtract from their reward.
   // When they guess the word, log their final reward amount.
 
+// add the array of the
 
-  var reward = function (dollar){
+// switch testing whether anything in the case line is what is going on
+// use switch case and keep going down until there is a default
+// splice new elements in the and it will change what is going on 
 
-    var dollar = (geussedLetter === word [i] +1)
-
-    if (dollar) {
-      console.log ( dollar + 100 )
-    };
-
-    console.log (dollar);
-
-  };
 
 
 // Bonus: Make it like Hangman:

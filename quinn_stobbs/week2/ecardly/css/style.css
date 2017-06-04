@@ -1,0 +1,65 @@
+/*
+Project Name: Ecard.ly
+Client: General Assembly
+Author: Christopher Castig | @castig
+Developer @GA in NYC
+*/
+
+/*
+Background Color: #d6d6d6 Text Color: #000000
+Link Color: #cc6633
+Container Width: 940px
+Left Columm (#main): 640px
+Right Column (#sidebar): 280px
+
+ Heading 1 (using the image replacment technique) Ecard.ly
+
+ Heading 2 (20px) Ecard of the Day Paragraph (12px)
+ (3) Heading 2 Doing the Big Work Paragraph (12px)
+
+  Download Posted by Melanie Stevens on August 6, 2012 / Comments (3) ARCHIVE (12px) January February March April May June July BLOGROLL Mailchimp Shopify The Next Web Mint.com Mashable
+
+*/
+
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+     background-color: lightgrey;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+h1 {
+  background-repeat: repeat-x;
+  position: absolute;
+}
+
+.logo{
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 30px;
+  border-radius: 100%;
+}
+
+.nyc {
+  position: absolute;
+  display: block;
+  text-align: right;
+  padding: 50px 50px 50px 50px;
+}
