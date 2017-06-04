@@ -53,17 +53,16 @@ a:hover {
 .sectionimages {
   height: auto;
   width: 300px;
-  margin-left: 45%;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  /*margin-left: 45%;
+  margin-bottom: 20px;*/
 }
 
 .titles {
   font-weight: bold;
   font-family: 'Lora', serif;
   color: #333635;
-  margin-left: 49%;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin: 0 auto;
 
 }
 
