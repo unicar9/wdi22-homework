@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fat Cat Dancing</title>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<script type= "text/javscript">
+<![CDATA[
+  var cats = new Array(3);
+  var fatCat = 0;
+  var direction;
+  var begin;
+  cats[0] = "fatcat0.jpg";
+  cats[1] = "fatcat1.jpg";
+  cats[2] = "fatcat2.jpg";
+
+  function dance() {
+    if (fatCat == 0)
+      direction = "right";
+    else if (fatCat == 2)
+      direction = "left"
+    if (direction == "right")
+      ++fatCat;
+    else if (direction == "left")
+      --fatCat;
+    document.animation.src = cats[fatCat];
+  }
+  function startDancing() {
+    if (begin)
+      clearInterval(begin);
+    begin = setInterval("dance()",200);
+  }
+]]>
+</script>
+</head>
+<body>
+<h1>Fat Cat Dancing</h1>
+<p><img src="fatcat1.gif" name="animation" alt="animation" id="animation" /></p>
+  <form action="">
+    <input type="button" name="run" value="Start Dancing" onClick="startDancing();" />
+    <input type="button" name="stop" value="Stop Dancing" onClick="clearInterval(begin);" />
+  </form>
+</body>
+</html>
+j

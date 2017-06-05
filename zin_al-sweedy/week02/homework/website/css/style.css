@@ -1,0 +1,165 @@
+  /*box-siz:*/
+
+border-box;
+/
+}
+body {
+  height: 9999;
+  margin: 0;
+}
+#container {
+  width: 0 auto;
+  text-decoration: none;
+  /*padding: 100px;*/
+
+  padding-left: 250px;
+  padding-right: 120px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+#right{
+  float:right;
+  margin-left: 30px;
+}
+ul {
+  font-size: 48;
+  line-height: 30px;
+  font-weight: bold;
+}
+.customimg{
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+ul li {
+  font-size: 30;
+  font-weight: normal;
+  line-height: 20px;
+}
+.nav {
+  display: inline-block;
+  width: 100%;
+  /*float: left;*/
+  /*margin:0 0 3px 0;*/
+
+  padding: 0;
+  list-style: none;
+  background: black;
+}
+
+/*.nav ul{
+  display: inline-block;
+  padding:10px 10px;
+  margin: auto;
+  background-color: black;
+  text-align: center;
+  height: 40px;
+}*/
+img {
+  float: left;
+  padding-right: 30px;
+
+}
+p {
+  margin: 10px;
+  text-align: justify;
+
+}
+iframe {
+  padding-top: 25px;
+  padding-bottom: 150px;
+}
+h1 {
+  text-align: center;
+}
+span {
+  position: absolute;
+  padding-bottom: 5px;
+}
+.nav li a {
+  display: inline-block;
+  float: left;
+  /*display: block;*/
+
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 200px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #069;
+  text-align: center;
+  /*border: 1px solid #ccc;*/
+}
+a:hover {
+  color: white;
+}
+.nav li a {
+  display: inline-block;
+  color: drak-blue;
+  text-align: center;
+  padding: 0 auto;
+  text-decoration: none;
+}
+.nav li a:hover {
+  color: #111;
+}
+
+/*
+nav {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  /*background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc; }*/
+.nav li {
+  display: inline;
+}
+.nav a {
+  display: inline-block;
+  padding: 10px;
+  /*text-decoration: none;
+  font-weight: bold;
+  color: #069;
+  border-right: 1px solid #ccc; }*/
+
+  .nav li a:hover {
+    color: #c00;
+    background-color: #fff;
+  }
+
+  */
+  /*nav {
+    margin-bottom: 50px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav.block-element ul {
+    display: block;
+    margin: auto;
+    width: 50%;
+}*/
+
+  footer {
+    /*float:none;*/
+    height: 135px;
+    /*clear: both;*/
+    margin: 150px 150px;
+    background-color: black;
+    color: white;
+    /*text-align: center;*/
+    padding: 800px;
+    width: auto;
+    text-align: center;
+    position: absolute;
+  }

@@ -1,0 +1,69 @@
+link my css file we need it
+do slowely and check it
+make sure have jquery in some foleder such as js folder
+$ or jQuery in consle and return function it works jq
+or type  log
+and say  lo($); not work
+could move our comments in jq
+in hints
+create  a hint div
+create div then put id for her after that get the text
+copy it and put it in div  then #word do css and display :non
+it  is there put at top of the page at 0,0
+using jq to do the question
+var words=("#word").text().split('');// split on any of these things in []regexp + one or more split on array without these things
+// no need for $ at words bec it is obj
+ if .text  ();will print the text in red menas junk text
+// get the var and put it in anew div bec it is hidden
+// use random number too many time repate it so we could put it in diff vars
+
+var $body =$('body');
+// check it in console by randy();
+// return func randy(max) put numb
+var randy = function  (max){
+return Math.floor.(Math)..........
+}
+
+
+console.log(words);
+we need a random word from  the array words and pass the length
+use the index in araay to acces the number
+use the hints and pesudo words
+insert these new words in a new div
+
+var $ div=$('<div class="word">')// creat new div + class for it and once in bulit it and put bh html text word
+put css to div
+use size font using pt or px
+no we need to append this div
+to line are same
+do the css in jq file for top using random
+to give the location
+but use the screen width.innerWidth and window.innerheight  to resize the screen
+setInterval(func,100); call the function
+it will run forever
+debugger what var in that
+if random index not defined probelm
+$ for only html tags not for all vars and also works without it
+not with normal vars
+let mmake the word display in css #word Id will be display none
+but in jq use fade hide or show
+should start with display none first to show it or hide it
+so  using fadIn and fade out
+if fade in not working
+less compelete version not have div
+use jquery cdn
+then put it in html script
+fadein and fade out
+fadein and fade out
+ do many divs not good way
+ so use function  by usinf this in ()bec it is js vanila not jq so $(this) become jq
+ remove kill itself the dvis so create and remove these divs not too many
+
+ code integration
+  from jq use cdn version
+  uncopmressed and there is code
+  jQuery 3.x
+
+jQuery Core 3.2.1 - uncompressed, minified, slim, slim minified
+ give e code
+ 
