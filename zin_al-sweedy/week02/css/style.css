@@ -1,0 +1,67 @@
+
+p{
+  color: green;
+}
+span{
+  /*color: red;*/
+  border:1px solid red;
+}
+/* *every thing in the page */
+/* define nesting
+all a inside p tag that what is a inside p tag*/
+p a{
+  color: purple;
+  font-size: 20px;
+}
+.redborder{
+  border:2px solid red;
+}
+/* .floatdemo.redborder*/
+.float-demo.redborder{
+  /*background-color: purpule;*/
+}
+.float-demos{
+  float:left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding:20px 50px;
+  margin: 50px;
+  /*background-color:brown;*/
+}
+h1:hover{
+  text-decoration: underline;
+  border:1px solid red;
+}
+h1:visited{
+  border:1px solid red;
+}
+
+div {
+  border: 1px dashed green;
+  /*display: block; default*/
+  display: inline;
+  /*chang th basic display */
+  width:500px;
+  /* out the width so it ignores it */
+}
+/* when hovr over the mouse*/
+/*   *{
+  border:1px solid red;
+}*/
+.comic {
+  font-family: "Comic Sans Ms";
+  color:gainsboro;
+}
+p#ulist{
+  color:brown;
+  font-size: 60pt;x
+}
+h1, p{
+  /*font-size: 40pt;*/
+  font-family: "Comic Sans Ms";
+  color:hotpink;
+}
+ /*whole body not good idea*/
+/* this is comment not //*/
+/* define new reule*/
+/*p.comics and p#ulist so not convuse*/
