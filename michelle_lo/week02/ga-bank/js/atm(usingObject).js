@@ -1,4 +1,4 @@
-
+//working version now committed to 'atmMASTER'
 
 $(document).ready(function () {
   var bank = {
