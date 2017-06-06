@@ -12,18 +12,19 @@ var guessedWords = [];
 var lifeLeft = 6;
 var letterFound = false;
 
-var answer = ['S','T','A','R'];
-var attempt = ['_','_','_','_'];
+var answer = ['S','K','Y'];
+var attempt = ['_','_','_'];
 
 console.log("Welcome to Word Guess. This word contains " + answer.length + " letters. Use guess('[put any letter here]') to play.");
 console.log("Life: 6");
 console.log('$ 0');
 
+//Check if the letter is in the answer
 var letterCheck = function(){
 
   if(letterFound === true){
     currentRew = currentRew + reward;
-    console.log("Yes '_'");
+    console.log("You got one!");
     console.log('Life: ' + lifeLeft);
   } else {
     currentRew = currentRew - reward;
@@ -33,39 +34,36 @@ var letterCheck = function(){
   }
 };
 
-var guess = function( g ) {
+var guessLetter = function( g ) {
 
   for( var i = 0; i < answer.length; i++ ){
     reward = Math.round(Math.random() * 1000);
-
     if ( g.toUpperCase() === answer[i]) {
       attempt[i] = answer[i];
       letterFound = true;
     }
-  }
+  } // for loop
+
   for (var i = 0; i < guessedWords.length; i++) {
-    if (g === guessedWords[i]){
-      console.log('Try again');
-    } else {
+    if (g !== guessedWords[i]){
       letterCheck();
-    }
+    } console.log("Guessed already");
   }
 
   console.log(attempt.join(''));
   console.log('$ ' + currentRew);
-
   guessedWords.push(g);
+
 
   if ( attempt.join('') === answer.join('') ) {
     console.log('You win. You can take home $' + currentRew);
-  }
+  } // check if player wins
 
   if (lifeLeft === 0) {
     hangman();
-  }
+  } // chek if player loses
+
 };
-
-
 
 var hangman = function(){
   var hang =[ "  ____________" ,

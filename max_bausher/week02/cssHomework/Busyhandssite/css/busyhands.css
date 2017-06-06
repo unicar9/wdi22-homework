@@ -1,0 +1,54 @@
+
+
+#background1 {
+  background-image: url("busyhandsimages/bg_wrapper.jpg");
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+#background2 {
+  background-image: url("busyhandsimages/bg_body.jpg");
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.topnav {
+
+}
+
+.blurb {
+  border-top: 1px solid grey;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid grey;
+  display: inline-block;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    background-color: black;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: blue;
+    border-top: 2px;
+    text-decoration-line: overline;
+}
+
+.bottomnavlinks h2 {
+  color: white;
+  text-decoration: underline;
+}
+
+* {
+  font-family: Arial;
+  margin: 0;
+}

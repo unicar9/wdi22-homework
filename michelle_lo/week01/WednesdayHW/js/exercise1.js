@@ -13,31 +13,26 @@
 
 var answerWord = ["F","O","X"];
 var runningResult = ["_","_","_"]
-var guessNumber = 0
+// var guessNumber = 0
 
 var guessLetter = function(guess){
-  for (var i = 0; i < answerWord.length; i++) {{
+  for (var i = 0; i < answerWord.length; i++) {
     if (guess === answerWord[i]){
-        {
-          runningResult[i] = guess;
-          // runningResult.splice(i,i, guess);
-          //attempted to use 'splice' but it adds an extrax "_ " after "O" in the console.log
-        }
-        console.log(runningResult.join(''));
-        alert ("You got a letter!");}
-      };
+      runningResult[i] = guess;
+      // runningResult.splice(i,i, guess);
+      //attempted to use 'splice' but it adds an extrax "_ " after "O" in the console.log
     }
-    {
-     if (answerWord.toString('') !== runningResult.toString('')){
-        console.log('keep going');
-        alert ('have another go')}
-    ;}
-    {
-     if (answerWord.toString('') === runningResult.toString('')){
-        console.log('You did it!');
-        alert ('Great work!')}
-    ;}
-    ;}
+    console.log(runningResult.join(''));
+    alert ("You got a letter!");
+  } // for
+  if (answerWord.toString('') !== runningResult.toString('')){
+    console.log('keep going');
+    alert ('have another go');
+  } else {
+    console.log('You did it!');
+    alert ('Great work!');
+  }
+};
 
 guessLetter('X');
 guessLetter('F');

@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+
+		<title>Jenn Schiffer</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class = "headerimage"> </div>
+<div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="bio.html">Bio</a>
+    <a href="Media.html">Media</a>
+    <a href="Hometown.html">Hometown</a>
+  </div>
+<div class = container><h1>Jenn Schiffer is amazeballs</h1>
+<div class="content">
+  <div class = "test">
+    <h3>  Where is Jenn from?</h3>
+  </div>
+  <p>Jenn is from Jersey</p>
+  <p>Did you know Jersey City is the second-most-populous city in the U.S. state of New Jersey, after Newark?</p>
+  <p>Here's Jersey on a map</p>
+  <div id="map"></div>
+  <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+</div>
+<div class="side">
+<p><img id ="jelfie" src="https://media.giphy.com/media/3o7TKuw4MFHqeG0GqI/giphy.gif?response_id=59240e97f609a976f3d69e80" alt="jelfie"></p>
+<p></p>
+</div>
+</div>
+
+</body>
+</html>
