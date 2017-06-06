@@ -49,3 +49,5 @@ var revengeOfBadger = {
     return winner;
   }
 };
+
+revengeOfBadger.draw();

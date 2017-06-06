@@ -14,54 +14,90 @@
 
 // variables for the words
 
+// var word = ["F", "O", "X"];
+//
+// var guess = ["_", "_", "_"];
+//
+// var guesses = [ ];  //store geusses
+//
+// //create geusses
+// var guessLetter = function (guessedLetter){
+// //iterate through the variable
+//
+//   for (var i = 0; i < guess.length; i++) {
+//
+//     guesses.push (geussedLetter);
+//
+//     if ( guessedLetter === word[i]) {
+//       console.log ("Correct, you've found a letter: " + word[i]){}
+//       geuss = word[i];
+//       else {
+//        console.log ("Incorrect, try again");
+//
+//     };
+//
+//   };
+//
+//
+//   // geusses to check
+//   guessLetter ("O")
+//   guessLetter ("D")
+//   guessLetter ("X")
+
+
+//NUGGET answer
+
 var word = ["F", "O", "X"];
+var guessedWord = ["_", "_", "_"];
+var guesses = [ ];
 
-var guess = ["_", "_", "_"];
+var guessLetter = function ( letter ){
 
-var guesses = [ ];  //store geusses
+ guesses.push(letter);
 
-//create geusses
-var guessLetter = function (guessedLetter){
+ for (var i = 0; i < word.length; i++) {
+     if (word[i] === letter) {
+       console.log("That's correct, you found: " + letter);
+       guessedWord[i] = letter;
+       console.log("The word is: " + guessedWord);
+     } else {
+       // console.log("");
+     }
+ }
 
-      var guessedLetter = word.match(guess);
+ };
+// geusses to check
+guessLetter ("F");
+guessLetter ("O");
+guessLetter ("D");
+console.log("The guesses were: " + guesses);
 
-      var guessedLetter = guesses.match(guess);
 
-//iterate through the variable
 
-  for (var i = 0; i < geuss.length; i++) {
-// if return value for correct + return the missing letters
-    if ( guessedLetter === word[i]) {
-      // return "Correct, you've found a letter";
-      console.log ("Correct, you've found a letter: " + word[i]);
-        // break ; //this is superflous as it just stops the iteration
-    } else {
-      console.log ("Incorrect, try again");
-      // break ;
+  // Comments
+
+  //it seemed to be iterating fine by itself however I am not sure if the answer I was getting was what it was meant to be.
+
+  // Wasn't sure if the first part was right. I wanted to make sure this was working before building on it further.
+
+  // Bonus: Make it more like Wheel of Fortune:
+  //
+  // Start with a reward amount of $0
+  // Every time a letter is guessed, generate a random amount and reward the user if they found a letter (multiplying the reward if multiple letters found), otherwise subtract from their reward.
+  // When they guess the word, log their final reward amount.
+
+
+  var reward = function (dollar){
+
+    var dollar = (geussedLetter === word [i] +1)
+
+    if (dollar) {
+      console.log ( dollar + 100 )
     };
 
-    };
-
-    guesses.push(guess);
+    console.log (dollar);
 
   };
-
-// geusses to check
-guessLetter ("O")
-guessLetter ("D")
-guessLetter ("X")
-
-//it seemed to be iterating fine by itself however I am not sure if the answer I was getting was what it was meant to be.
-
-// Wasn't sure if the first part was right. I wanted to make sure this was working before building on it further.
-
-// Bonus: Make it more like Wheel of Fortune:
-//
-// Start with a reward amount of $0
-// Every time a letter is guessed, generate a random amount and reward the user if they found a letter (multiplying the reward if multiple letters found), otherwise subtract from their reward.
-// When they guess the word, log their final reward amount.
-
-
 
 
 // Bonus: Make it like Hangman:

@@ -6,7 +6,7 @@
 //
 // Start out by getting this working with discrete functions.
 // If you feel comfortable with that, try to put all your functions, collections, etc, into an object.
-var test = [ "enlists", "google", "inlets", "banana"],
+var test = [ "enlists", "google", "inlets", "banana"];
 var anagramChecker = {
   anagrams: [],
 

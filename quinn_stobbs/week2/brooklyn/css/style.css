@@ -1,0 +1,51 @@
+ /*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+*/
+
+
+
+/* new york, huffington post, lucky, marie claire */
+
+h1{
+  font-family: "Times New Roman", serif;
+  color: 		#A9A9A9;
+}
+
+p {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Times New Roman", serif;
+  color: #656565;
+}
+
+.date {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Times New Roman", serif;
+  color: 	#87CEFA;
+}
+
+a {
+    color: 	#87CEFA;
+    text-decoration: none;
+}
+
+.sponsors {
+  display: inline-block;
+  border: 5px solid lightgrey;
+  padding: 1px;
+  height: 143px;
+}
+
+h2 {
+  font-size: 16px;
+  color: #696969;
+}
