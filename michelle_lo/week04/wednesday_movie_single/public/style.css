@@ -1,0 +1,21 @@
+body {
+  background-color: hotpink;
+  font-family: "Comic Sans MS", serif
+}
+
+/*img {
+  height: 20px,
+  border: black 10px,
+}*/
+
+.poster {
+  float: left;
+  margin: 10px
+}
+.synopsis{
+text-align: justify;
+/*margin-top: 0px*/
+margin: 40px 50px 40px 10px
+}
+
+.alternate

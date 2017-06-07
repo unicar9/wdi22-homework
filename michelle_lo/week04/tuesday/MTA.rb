@@ -36,7 +36,7 @@ def single_trip (line, start_station, end_station)
 end
 
 # MTA method calls the trip method
-def MTA (start_line, start_station, end_line, end_station )
+def MTA_journey (start_line, start_station, end_line, end_station )
   if start_line == end_line
     p single_trip start_line, start_station, end_station
     p num_stops
@@ -74,4 +74,4 @@ end
 
 
 #this calls the MTA method, utilising the inputs from the user
-MTA start_line, start_station, end_line, end_station
+MTA_journey start_line, start_station, end_line, end_station
