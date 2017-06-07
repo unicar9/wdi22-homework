@@ -1,0 +1,9 @@
+
+
+Movie Details:
+
+<br>
+<% @results.each do |result| %>
+  <p><%=/movie_details/{<%= result["id"] %>}%></p>
+  <br>
+<% end %>

@@ -1,0 +1,8 @@
+
+Results matching your search criteria of: '<%= params["keyword"] %>'
+
+<br>
+<% @results.each do |result| %>
+    <a href="/movie_details/<%= @result["id"] %>"><%= @result["title"] %></a>
+    <br>
+<% end %>
