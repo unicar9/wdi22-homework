@@ -62,7 +62,7 @@ window.onload = function () {
       if (word[i] === "-") {
         guess.innerHTML = "-";
         space = 1;
-      } else {
+    } else {
         guess.innerHTML = "_";
       }
 
