@@ -1,0 +1,10 @@
+
+Results matching your search criteria of: '<%= params["keyword"] %>'
+
+<br>
+<% @results.each do |result| %>
+    <a href="/movie_details/<%= result["id"] %>">
+        <img src="http://image.tmdb.org/t/p/w300<%= result["poster_path"] %>">
+    </a>
+    <% binding.pry %>
+<% end %>

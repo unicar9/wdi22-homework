@@ -5,18 +5,16 @@ window.setInterval(function() {
   var left = $cat.css('left'); // where left = 0px
   left = parseInt(left); // converted to 0 w/o px
 
-  // console.log(left);
-
   $cat.css('left', (left + 10) + 'px'); //
 
   if(left > window.innerWidth - $cat.width() ){
   //  $cat.css('border', '10px solid red')
+  
+  $cat.css('transform', 'rotateY(180deg)');
   }
 }, 50);
 
-// var $gasp = $("<h1>Meow!</h1>");
-//   $gasp.css("font-size", "24px");
-//   $("body").prepend($gasp);
+
 
 // var cat = document.querySelector('img');
 // cat.style.left = '0px';

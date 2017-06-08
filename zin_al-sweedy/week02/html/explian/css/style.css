@@ -1,0 +1,60 @@
+/*@import
+url('http://');*/
+/* hader from inspect*?
+body {
+  height: 9999px;
+  font-family: 'Roboto Condensed';
+}
+/* put fonts from google copy the link from style page*/
+.box {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  border: 1px solid black;
+}
+.big {
+  background-image: url(http://fillmurray.com/500/500);
+  width: 500;
+  height: 500;
+  transition: width 1s linear 2s;
+  /* or ease or step(10)*/
+  /*transition:width is linear;
+  transition-duration: 1s;
+  transition-delay: 2s;*/
+  /*opacity: 0.5;*/
+  /*transform: rotate(720deg)scale(400);*/
+  transform: translate(200px,300px);/* or one value*/
+}
+.static {
+  /*position: static; /* This is default */
+  position: static;
+  /*left: 200px;
+  top:200px;
+  /*This is the default*/
+}
+
+/*// with relative can change position slightly
+/* shift jump bet 10 and ctrl 100*/
+
+.relative {
+  position: relative; /* rlative to statice position item*/
+  left: 200px;
+  top: 200px;
+}
+
+.absolute {
+  position: absolute; /*r elative to  documnt or to narest specifically-positioned ancestor*/
+  top: 50px;
+  left: 50px;
+
+}
+.fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  /*background-color:  black;*/
+  color: pink;
+
+}
