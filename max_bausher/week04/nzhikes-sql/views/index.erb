@@ -1,0 +1,8 @@
+
+<% @hikes.each do |hike|%>
+    <p> <%= hike["name"] %> <br>
+    <a href="/hikes/<%= hike["id"] %>"><img class="indexpics" src="<%= hike["image"] %>"></a><br>
+    <a class="button" href="/hikes/<%= hike["id"] %>/edit">Update Hike's Beta</a>
+        <a class="button" href="/hikes/<%= hike["id"] %>/delete">Remove Hike</a>
+    </p>
+<% end %>
