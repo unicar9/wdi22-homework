@@ -16,8 +16,11 @@ get "/show_results" do
     # binding.pry
     @results = movie_data["results"]
 
-    # @result_count
-    erb :show_results
+    if movie_data["results"].length == 1
+        redirect "https://www.themoviedb.org/movie/" + movie_data["results"][0]["id"].to_s
+    else
+        erb :show_results
+    end
 end
 
 get "/movie_details/:id" do
