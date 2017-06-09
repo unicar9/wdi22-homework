@@ -1,0 +1,21 @@
+
+body {
+  background-color: rgb(172, 146, 123);
+  font-family: "Helvetica", serif
+}
+
+
+.poster {
+  /*float: left;*/
+  margin: 10px
+}
+.info{
+  /*float:right;*/
+  text-align: justify;
+  /*margin-top: 0px*/
+  margin: 40px 50px 20px 10px
+}
+
+h3 {
+  display: inline-block;
+}
