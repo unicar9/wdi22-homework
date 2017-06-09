@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root 'pages#welcome'
 
-  get 'games/magic' => 'games#magic'
-  get 'games/secret' => 'games#secret'
-  get 'games/rock_paper_scissors' => 'games#rps'
+  get '/games/magic/:question' => 'magic#question'
+  get '/games/secret/:guess' => 'secret#guess'
+  get '/games/rock_paper_scissors' => 'rps#play'
 
 
 
