@@ -1,0 +1,21 @@
+
+<h2>Edit Mountain</h2>
+<form action="/mountains/<%= @mountain["id"] %>" method="post">
+  <p>
+    <label for="">Mountain Name:</label>
+    <input type="text" name="name" value="<%= @mountain["name"] %>">
+  </p>
+  <p>
+    <label for="">Image URL:</label>
+    <input type="text" name="image" value="<%= @mountain["image"] %>">
+  </p>
+  <p>
+    <label for="">Location:</label>
+    <input type="text" name="location" value="<%= @mountain["location"] %>">
+  </p>
+  <p>
+    <label for="">Elevation:</label>
+    <input type="text" name="elevation" value="<%= @mountain["elevation"] %>">
+  </p>
+  <input type="submit" name="" value="Update Mountain">
+</form>
