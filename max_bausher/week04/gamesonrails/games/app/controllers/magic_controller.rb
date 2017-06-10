@@ -1,9 +1,12 @@
 
 class MagicController < ApplicationController
 
-    def magic
+    def question
+        # raise
+        responses = ["highly likely", "definitely not", "100% YES!", "50/50"]
 
-    end #magic method end
+        @response = responses.sample
+    end
 
 
 
