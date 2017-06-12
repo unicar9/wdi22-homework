@@ -1,0 +1,51 @@
+<p>Rock Paper Scissors Game</p>
+<a href="/games/rock_paper_scissors/rock">my next guess</a>|
+<a href="/games/rock_paper_scissors/paper">my next guess</a>|
+<a href="/games/rock_paper_scissors/scissors">my next guess</a>|
+<br>
+<br>
+<br>
+
+<input placeholder= "put you choice here" type="text">
+<button >Submit</button>
+
+
+<p>computer choice:  <%= @comp_choice %></p>
+<p>User guess: <%= params["throw"] %></p>
+
+<% if @comp_choice == "paper" && params["throw"] == "rock" %>
+<h2>Computer wins</h2>
+<% elsif params["throw"] == "paper" && @comp_choice  == "rock"%>
+<h2>User wins</h2>
+<% elsif @comp_choice == "rock" && params["throw"] == "scissors" %>
+<h2>Computer wins</h2>
+<% elsif params["throw"] == "rock" && @comp_choice  == "scissors"%>
+<h2>User wins</h2>
+<% elsif @comp_choice == "scissors" && params["paper"] == "scissors" %>
+<h2>Computer wins</h2>
+<% elsif params["throw"] == "scissors" && @comp_choice  == "paper"%>
+<h2>User wins</h2>
+<% elsif params["throw"] == @comp_choice %>
+<h2>You got same bet play again</h2>
+<% else %>
+<h2>You entered a wrong word </h2>
+<% end %>
+<br>
+<br>
+<script>
+var button = document.querySelector("button")
+var input = document.querySelector("input")
+button.onclick = function(){
+  // console.log(input.value)
+location.href = "/games/rock_paper_scissors/" + input.value
+};
+console.log("Hello")
+</script>
+<!--
+<% if @comp_choice == params["throw"] %>
+<h2>Your win the game</h2>
+
+<%#else %>
+<h2>You lose the game </h2> -->
+
+<% end %>
