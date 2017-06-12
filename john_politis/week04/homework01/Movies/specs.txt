@@ -1,0 +1,48 @@
+
+https://gist.github.com/textchimp/7a676b2343db39b71c12a75596ee4630
+
+
+API
+https://api.themoviedb.org/3/movie/MOVIE_ID_GOES_HERE?api_key=24d863d54c86392e6e1df55b9a328755
+
+
+Movies I
+
+Specification
+
+Build a search form that lets the user enter a movie name. The Sinatra app will use HTTParty to fetch the data 
+for the chosen movie from OMDB and display it on the page. Display the poster, as a bare minimum.
+
+
+Bonus I
+
+Modify your existing code to allow searches for multiple matches. For example, a search for "Alien" 
+should return a list of clickable links (each of which would then take you to the full results page for the selected movie):
+
+
+    Alien
+    Aliens
+    Alien 3
+    Alien Resurrection
+    My Stepmother Is An Alien
+    etc
+
+The OMDB site documents the parameter you need to use to search for multiple matches.
+Bonus II
+
+Update your code from bonus I so that if only one movie matches your search you are forwarded directly to that movie's result page.
+Additional Resources
+
+    Dynamic URLs in Sinatra
+    Open movie database API
+    HTTParty Tutorial
+
+pair-programming-bot.md
+Pair Programming Bot
+
+Recreate this site using Sinatra:
+
+http://pairprogrammingbot.herokuapp.com/
+
+You can try to match/steal the existing style or create your own.
+

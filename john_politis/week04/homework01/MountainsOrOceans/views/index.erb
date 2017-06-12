@@ -1,0 +1,16 @@
+<h2>All Mountains</h2>
+
+<div class="section">
+<%	@mountains.each do |el| %>
+	<p>		
+		<img src="<%=el.image%>" > 
+		<p>
+			<a href="/mountains/<%=el.id%>">Details</a>			
+			<a href="/mountains/<%=el.id%>/edit">edit</a>
+			<a href="/mountains/<%=el.id%>/delete">delete</a>
+			<a href="/mountains/new">new</a>
+		</p>
+		<hr>
+	</p>
+<%end%>
+</div>

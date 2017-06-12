@@ -1,0 +1,10 @@
+body {
+	background-color: #d0c7e6;
+}
+
+#guess_result {
+	text-align: center;
+	top: 121px;
+	position: absolute;
+	left: 386px;
+}

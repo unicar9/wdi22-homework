@@ -1,0 +1,39 @@
+img {
+	max-width: 467px;	
+}
+
+a {
+	width: 72px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+body {
+	background: #e1e1bb;
+}
+
+#content {
+	width: 460px;
+	margin-left: 281px;	
+}
+
+form {
+	width: 436px;
+	outline: 1px solid rgb(210, 54, 0);
+	background: #c1de88;
+	padding: 10px;
+}
+
+#btn-add {
+	margin-left: 100px;
+}
+
+
+#location {
+	padding-left: 20px;
+}
+
+input["name=location"] {
+	width: 150px;
+}
+
