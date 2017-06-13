@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'pages#welcome'
+  root 'games#welcome'
+
+  get '/games/' => 'games#welcome'
 
   get '/games/magic/' => 'magic#question'
   get '/games/magic/:question' => 'magic#question'
@@ -11,8 +13,6 @@ Rails.application.routes.draw do
 
   get '/games/rock_paper_scissors/' => 'rps#play'
   get '/games/rock_paper_scissors/:win' => 'rps#play'
-
-
 
 
 end
