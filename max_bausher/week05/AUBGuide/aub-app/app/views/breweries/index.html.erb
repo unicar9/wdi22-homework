@@ -1,0 +1,13 @@
+<h2>All Breweries</h2>
+
+<ul>
+<% @breweries.each do |brewery| %>
+
+    <li>
+        <a href="/breweries/<%= brewery.id %>">
+            <%= brewery.name %>
+        </a>
+    </li>
+
+<% end %>
+</ul>
