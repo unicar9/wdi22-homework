@@ -1,4 +1,6 @@
-<h2>Brewery Profile</h2>
+
+<div class="layout">
+<h2 class="title">Brewery Profile</h2>
 
 <p>Name: <%= @brewery.name %></p>
 <img class="brewery_photo" src="<%= @brewery.image %>">
@@ -19,3 +21,4 @@
 
 <a href="/breweries/<%= @brewery.id %>/edit">Edit Brewery Info</a>
 <%= link_to "Delete", "/breweries/#{ @brewery.id }", method: :delete %>
+</div>
