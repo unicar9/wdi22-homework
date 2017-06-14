@@ -14,7 +14,7 @@
 <ul>
 <% @brewery.beers.each do |beer| %>
     <li>
-        <a href="/beers/<%= beer.id %>"><%= beer.type %></a>
+        <a href="/beers/<%= beer.id %>"><%= beer.style %></a>
     </li>
 <% end %>
 </ul>

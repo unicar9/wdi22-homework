@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     post '/beers' => 'beers#create'
 
     get '/beers/:id/edit' => 'beers#edit'
-    post '/beers/:id' => 'beers#update'
+    patch '/beers/:id' => 'beers#update', as: 'beer'
 
     get '/beers' => 'beers#index'
     get '/beers/:id' => 'beers#show'

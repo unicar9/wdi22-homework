@@ -19,10 +19,13 @@ class BeersController < ApplicationController
     end
 
     def edit
+        @beer = Beer.find params["id"]
+        @breweries = Brewery.all
     end
 
     def update
-        beer = Beer.update beer_params
+        beer = Beer.find params["id"]
+        beer.update beer_params
         redirect_to "/beers"
     end
 
