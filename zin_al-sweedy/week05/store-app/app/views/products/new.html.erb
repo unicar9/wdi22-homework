@@ -1,0 +1,35 @@
+<h2>Create New Product</h2>
+<%= form_for @product do |f| %>
+<p>
+  <%= f.label :catogery_id %>
+  <%= f.collection_select( :catogery_ids, @catogery, :id, :name, include_blank: true ) %>
+</p>
+
+<p>
+  <%= f.label :sale_id %>
+  <%= f.collection_select( :sale_ids, @sale, :id, :number, include_blank: true) %>
+</p>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+</p>
+
+<p>
+  <%= f.label :number %>
+  <%= f.text_field :number, required: true %>
+</p>
+<p>
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity, required: true %>
+</p>
+
+<p>
+  <%= f.label :price %>
+  <%= f.text_field :price, required: true %>
+</p>
+
+
+<%= f.submit %>
+
+<% end %>

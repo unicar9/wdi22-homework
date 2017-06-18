@@ -1,0 +1,18 @@
+
+<%= form_for @user do |f| %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <br>
+
+  <%= f.submit %>
+
+<% end %>
