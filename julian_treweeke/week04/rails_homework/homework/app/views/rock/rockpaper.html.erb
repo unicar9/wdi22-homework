@@ -1,0 +1,21 @@
+<h1 class="eightballheading"> Scissors, Paper, Rock.</h1>
+<p>Choose your weapon.</p>
+
+<div id="rockpaper">
+<img class="weapon" id = "SCISSORS" src="/assets/SCISSORS.png">
+<img class="weapon" id ="PAPER" src="/assets/PAPER.png">
+<img class="weapon" id = "ROCK" src="/assets/ROCK.png">
+
+<img src="<%= @computerpic %>">
+</div>
+
+
+
+<form method='get' action="/rock/play">
+  <input type="text" name="choice" placeholder="Weapon">
+  <button>Submit!</button>
+</form>
+
+<!-- <script src="assets/jquery.js" charset="utf-8"></script>
+<script src="assets/jquery_ui.js"></script>
+<script src="assets/script.js" charset="utf-8"></script> -->

@@ -1,0 +1,27 @@
+<h2>Edit Synth</h2>
+
+<form action="/synths/<%= @synth["id"]%>" method="post">
+  <p>
+  <label for="">Name:</label>
+  <input type="text" name="name" value="<%= @synth["name"]%>">
+  </p>
+
+  <p>
+  <label for="">Image:</label>
+  <input type="text" name="image" value="<%= @synth["image"]%>" >
+  </p>
+
+  <p>
+  <label for="">Brand:</label>
+  <input type="text" name="brand" value="<%= @synth["brand"]%>">
+  </p>
+
+  <p>
+  <label for=""> Year:</label>
+  <input type="text" name="year" value="<%= @synth["year"]%>">
+  </p>
+
+  <p>
+  <input type="submit" name="" value="Update Synth">
+  </p>
+</form>
