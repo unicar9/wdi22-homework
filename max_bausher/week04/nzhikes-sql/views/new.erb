@@ -1,0 +1,38 @@
+
+
+<h2>NZ Hikes</h2>
+
+<div id="newform" class="border">
+<h3>Add some Beta on a new hike here!</h3>
+<form action="/hikes" method="post">
+
+    <p>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Hike Name">
+    </p>
+    <p>
+        <label>Images</label>
+        <input type="text" name="image" placeholder="Image URL">
+    </p>
+    <p>
+        <label>Distance</label>
+        <input type="text" name="distance" placeholder="Dist. Return in km">
+    </p>
+    <p>
+        <label>Nearby</label>
+        <input type="text" name="near" placeholder="Closest town">
+    </p>
+    <p>
+        <label>Difficulty</label>
+        <input type="text" name="difficulty" placeholder="Scale: 1-10">
+    </p>
+
+    <input type="submit" name="" value="Add this Hike">
+
+</form>
+</div>
+
+<div id="gotoindex" class="border">
+    <label>See Existing Hikes</label>
+    <button id="list" action="/hikes">Click here</button>
+</div>

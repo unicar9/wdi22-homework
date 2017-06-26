@@ -1,0 +1,27 @@
+<div class="layout">
+    <h1 class="title">Magic 8 Ball</h1>
+
+    <% if params["question"] %>
+        <p>Your question is: <%= params["question"] %>?</p>
+        <p>From what I can tell,  <%= @response %></p><br><br>
+
+    <% end %>
+    <!-- <form action="/games/magic/"> -->
+    <label id="magiclabel">Ask me any question, and I will determine its truthiness</label> <br><br>
+    <input id="magicinput" type="text">
+    <button id="magicbutton">Ask Your Question</button>
+
+</div>
+<!-- </form> -->
+<script>
+    
+        $('button').on('click', function(){
+            // debugger;
+            var newQuestion  = document.querySelector('input').value;
+
+            // debugger
+            window.location.href = "/games/magic/" + newQuestion
+        });
+</script>
+<!-- Form button -->
+    <!-- onclick -> get the value from  -->
