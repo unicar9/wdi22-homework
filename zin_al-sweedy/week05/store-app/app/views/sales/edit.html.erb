@@ -1,0 +1,21 @@
+<h2>Edit Sale</h2>
+<%= form_for @sale do |s| %>
+<p>
+  <%= s.label :sale_id %>
+  <%= s.collection_select( :product_id, @products, :id, :name, include_balnk: true) %>
+</p>
+<p>
+  <%= s.label :catogery_id %>
+  <%= s.collection_select( :catogery_id, @catogeries, :id, :name,include_balnk: true ) %>
+</p>
+<p>
+  <%= s.label :name %>
+  <%= s.text_field :name, required: true %>
+</p>
+
+<p>
+  <%= s.label :number %>
+  <%= s.text_field :number, required: true %>
+</p>
+<%= s.submit %>
+<% end %>

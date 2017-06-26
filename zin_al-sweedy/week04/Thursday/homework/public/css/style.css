@@ -1,0 +1,12 @@
+body {
+  background-color: blue;
+  font-family: "Comic Sans MS", sans-serif;
+  color:white;
+}
+a.edit {
+  font-size: 8px;
+  color:white;
+}
+a{
+  color: white;
+}

@@ -1,0 +1,17 @@
+<h2>Director Details</h2>
+<p>Name: <%= @director.name %></p>
+<p>Age: <%= @director.age %></p>
+<p>Period: <%= @director.period %></p>
+<img class="director_photo" src="<%= @director.image %>" alt="">
+<p>List Of Movies:</p>
+<ul>
+  <% @director.movies.each do |movie| %>
+  <li>
+    <a href="/movies/<%= movie.id %>"><%= movie.title %></a>
+  </li>
+  <% end %>
+</ul>
+
+<a href="/directors/<%= @director.id %>/edit">Edit Director Details</a>
+
+<br>
