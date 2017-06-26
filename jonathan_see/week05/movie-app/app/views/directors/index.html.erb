@@ -1,0 +1,16 @@
+<h2>Directors Index</h2>
+
+<ul>
+<% @directors.each do |director| %>
+
+  <li>
+
+    <a href="/directors/<%= director.id %>"><%= director.name %></a>
+
+    <a data-method="delete" href="/directors/<%= director.id %>">Delete</a>
+
+  </li>
+
+<% end %>
+
+</ul>

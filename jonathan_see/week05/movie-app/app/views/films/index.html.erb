@@ -1,0 +1,17 @@
+
+<h2>Films Index</h2>
+
+<ul>
+<% @films.each do |film| %>
+
+  <li>
+    
+    <a href="/films/<%= film.id %>"><%= film.title %></a>
+
+    <a data-method="delete" href="/films/<%= film.id %>">Delete</a>
+
+  </li>
+
+<% end %>
+
+</ul>

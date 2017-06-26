@@ -1,0 +1,27 @@
+<h2>Edit Artist</h2>
+
+<form action="/directors/<%= @director.id %>" method="post">
+
+  Name:
+  <input type="text" name="name" value="<%= @artist.name %>">
+  <br>
+
+  Date of Birth:
+  <input type="text" name="dob" value="<%= @artist.dob %>">
+  <br>
+
+  Nationality:
+  <input type="text" name="nationality" value="<%= @artist.nationality %>">
+  <br>
+
+  Period:
+  <input type="text" name="period" value="<%= @artist.period %>">
+  <br>
+
+  Image URL:
+  <input type="text" name="image" value="<%= @artist.image %>">
+  <br>
+
+  <button>Update Artist</button>
+
+</form>
