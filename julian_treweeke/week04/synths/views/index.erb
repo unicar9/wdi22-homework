@@ -1,0 +1,13 @@
+<h2>Analogue Synth List</h2>
+
+
+<% @synths.each do |synth| %>
+<div class='wrapper'>
+<h2><%= synth["name"] %></h2>
+<p><a href="/synths/<%= synth["id"] %>"><img class="thumbnail" src="<%= synth["image"] %>"></a></p>
+<p><a class="edit" href="/synths/<%= synth["id"]%>/edit">Edit</a></p>
+<p><a class="edit" href="/synths/<%= synth["id"]%>/delete">Delete</a></p>
+
+
+</div>
+<% end %>

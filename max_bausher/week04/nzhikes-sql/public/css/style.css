@@ -1,0 +1,44 @@
+
+body {
+    background-color: lightgrey;
+    align-content: center;
+    font-family: 'Slabo 27px', serif;
+}
+
+
+.indexpics {
+    max-width: 500px;
+}
+
+.layout {
+    text-align: center;
+    margin: 0;
+}
+
+#hikepic {
+    max-width: 600px;
+}
+
+#logo {
+    margin-top: 100px;
+    text-shadow: 1px 1px 6px rgb(39, 131, 65);
+}
+
+.border {
+    margin-top: 200px;
+    border: 3px solid rgb(39, 131, 65);
+    border-radius: 25px;
+}
+
+#newform {
+    position: absolute;
+    left: 500px;
+    padding: 15px;
+}
+
+#gotoindex {
+    top: 320px;
+    position: absolute;
+    right:500px;
+    padding: 15px;
+}

@@ -1,0 +1,79 @@
+body {
+  background-color: black;
+  color: white;
+  justify-content: center;
+  text-align: center;
+}
+
+.eightball {
+
+  width:400px;
+  height:400px;
+  text-align: center;
+  z-index: 0;
+}
+
+.question, .answer {
+  color: #93B0FF;
+  animation: fade 3s;
+}
+
+.answer {
+  text-shadow: white;
+  position: relative;
+  top:230px;
+  z-index: 1;
+
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.eightballheading {
+color: #93B0FF;
+
+}
+
+input {
+color: #93B0FF;
+background-color: black;
+border: none;
+
+}
+
+button {
+border-top-color: #FC9;
+color: #93B0FF;
+background-color: black;
+border-radius: 10px;
+transition: 0.5s ease-in-out all;
+}
+
+button:hover {
+border-color: #93B0FF;
+
+}
+
+.white {
+
+  color:white;
+
+}
+
+#rockpaper {
+
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+
+}
+
+.weapon {
+  transition: 1s all ease-in-out;
+}
+
+.weapon:hover {
+  background-color:rgba(129, 133, 135, 0.26);
+}

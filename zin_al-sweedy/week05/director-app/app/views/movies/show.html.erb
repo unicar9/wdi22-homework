@@ -1,0 +1,13 @@
+<h1>Movie Details</h1>
+<p>Title <%= @movie.title %></p>
+
+<p>Director:
+<% if @movie.director.present? %><a href="/directors/<%= @movie.director.id %>"><%= @movie.director.name %></a>
+<% else %>
+(unkown)
+<% end %>
+</p>
+
+<p>Year: <%= @movie.year %></p>
+<a href="/movies/<%= @movie.id %>/edit">Edit Movie Detials</a>
+<br>

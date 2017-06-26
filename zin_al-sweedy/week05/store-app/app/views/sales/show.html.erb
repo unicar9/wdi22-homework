@@ -1,0 +1,18 @@
+<h2>Sale Edit</h2>
+<p>Name: <%= @sale.name %></p>
+<p>Catogery:
+<% if @sale.catogery.present? %>
+<a href="/catogeries/<%=@sale.catogery.id %>"><%= @sale.catogery.name %></a>
+<% else %>
+(unkown)
+<% end %>
+</p>
+<p>Name: <%= @sale.name %></p>
+<p>Product:
+<% if @sale.product.present? %>
+<a href="/products/<%=@sale.product.id %>"><%= @sale.product.name %></a>
+<% else %>
+(unkown)
+<% end %>
+</p>
+<p>Number: <%= @sale.number %></p>

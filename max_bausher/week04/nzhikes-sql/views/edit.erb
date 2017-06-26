@@ -1,0 +1,26 @@
+<h3>Update some Beta on the <%= @hike["name"] %> hike here!</h3>
+<form class="south" action="/hikes/<%= @hike["id"] %>/edit" method="post">
+
+    <p>
+        <label>Name</label>
+        <input type="text" name="name" value="<%= @hike["name"] %>">
+    </p>
+    <p>
+        <label>Images</label>
+        <input type="text" name="image" value="<%= @hike["image"] %>">
+    </p>
+    <p>
+        <label>Distance</label>
+        <input type="text" name="distance" value="<%= @hike["distance"] %>">
+    </p>
+    <p>
+        <label>Nearby</label>
+        <input type="text" name="near" value="<%= @hike["near"] %>">
+    </p>
+    <p>
+        <label>Difficulty</label>
+        <input type="text" name="difficulty" value="<%= @hike["difficulty"] %>">
+    </p>
+
+    <input type="submit" name="" value="Update Hike Beta">
+</form>

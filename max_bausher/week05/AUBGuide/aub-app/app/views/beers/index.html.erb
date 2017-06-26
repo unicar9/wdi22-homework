@@ -1,0 +1,16 @@
+
+<div class="layout">
+<h2 class="title">Comprehensive Beer List</h2>
+
+<ul>
+<% @beers.each do |beer| %>
+
+    <li>
+        <a href="/beers/<%= beer.id %>">
+            <%= beer.style %>
+        </a>
+    </li>
+
+<% end %>
+</ul>
+</div>

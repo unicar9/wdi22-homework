@@ -8,7 +8,7 @@ var bank = {
   // * Add functionality so that a user can deposit money into one of the bank accounts.
   deposit: function (amount, type) {
     // console.log("i'm alive")
-    if (amount < 0 || this.balances < 0){
+    if (amount < 0 /*|| this.balances < 0*/){
       return false;
     } else {
       bank.balances[type] += amount;

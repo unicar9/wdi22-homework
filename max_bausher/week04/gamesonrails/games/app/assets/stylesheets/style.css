@@ -1,0 +1,45 @@
+
+body {
+    background-color: rgba(0,0,0,0.75);
+    color: rgb(228, 95, 23);
+    align-content: center;
+}
+
+.layout {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    text-align: center;
+}
+
+.title {
+    text-shadow: 6px 3px 5px black;
+}
+
+.rpsbutton {
+    border: 1px solid black;
+    padding: 10px;
+    color: rgb(228, 95, 23);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.secretbutton {
+    border: 1px solid black;
+    padding: 10px;
+    color: rgb(228, 95, 23);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#magicinput {
+    border: 1px solid black;
+    padding: 10px;
+    color: rgb(228, 95, 23);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#magicbutton {
+    border: 1px solid black;
+    padding: 10px;
+    color: rgb(228, 95, 23);
+    background-color: rgba(0, 0, 0, 0.5);
+}
