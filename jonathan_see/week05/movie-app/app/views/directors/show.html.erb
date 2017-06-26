@@ -1,0 +1,25 @@
+<h2>Director Details</h2>
+
+<p>Name: <%= @director.name %></p>
+
+<p>Nationality: <%= @director.nationality %></p>
+
+<p>Date of Birth: <%= @director.dob %></p>
+
+<p>Period: <%= @director.period %></p>
+
+<p>List of Films:</p>
+
+<ul>
+  <% @director.films.each do |work| %>
+    <li>
+      <a href="/films/<%= films.id %>"><%= films.title %></a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/directors/<%= @director.id %>/edit">Edit Artist Details</a>
+
+<br>
+
+<img class="director_photo" src="<%= @director.image %>" alt="">

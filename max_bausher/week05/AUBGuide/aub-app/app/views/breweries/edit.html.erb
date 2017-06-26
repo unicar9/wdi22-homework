@@ -1,0 +1,27 @@
+
+<div class="layout">
+<h2 class="title">Edit Brewery Profile</h2>
+
+<form action="/breweries/<%= @brewery.id %>" method="post">
+
+    Name:
+    <input type="text" name="name" value="<%= @brewery.name %>">
+    <br>
+    Image URL:
+    <input type="text" name="image" value="<%= @brewery.image %>">
+    <br>
+    Location:
+    <input type="text" name="location" value="<%= @brewery.location %>">
+    <br>
+    Website:
+    <input type="text" name="website" value="<%= @brewery.website %>">
+    <br>
+    Philosophy:
+    <input type="text" name="philosophy" value="<%= @brewery.philosophy %>">
+    <br>
+
+
+    <button>Update Brewery Profile</button>
+
+</form>
+</div>

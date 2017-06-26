@@ -1,0 +1,12 @@
+
+<h3><%= @hike["name"] %></h3>
+
+<img id="hikepic" src="<%= @hike["image"] %>">
+<p>Distance: <%= @hike["distance"] %> km's return</p>
+<p>Nearby Town: <%= @hike["near"] %></p>
+<p>Difficulty Rating: <%= @hike["difficulty"] %> out of 10</p>
+
+<p>
+<label>Back to Existing Hikes</label>
+<button id="back" action="/hikes">Click here</button>
+</p>
