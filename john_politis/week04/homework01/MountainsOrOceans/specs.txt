@@ -1,0 +1,26 @@
+
+https://gist.github.com/ga-wolf/138cda021cb07a31d844a9082c2b4efa#file-mountains_or_oceans-md
+
+
+Mountains or Oceans
+
+Create a CRUD (Create, Read, Update, Delete) app for either Mountains or Oceans (or anything else that you pick).
+
+Make sure to include the following:
+
+    A page of all records in your database (e.g. all mountains)
+    A page that shows one record (e.g. one mountain)
+    A way to create, update, and delete a record
+
+Make sure to use:
+
+    SQL
+    Seperate your concerns (with views for each action)
+    Use a layout to hold all of your generic code
+
+
+
+
+Place:
+image: http://giffiles.alphacoders.com/919/9199.gif
+Description:

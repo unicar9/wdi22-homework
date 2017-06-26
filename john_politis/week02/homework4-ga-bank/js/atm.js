@@ -146,9 +146,10 @@ $(document).ready(function(){
             /**
               * Author: John Politis
               * Date :   27/05/2017
-              * Description :
+
+              * Description : The overdraft for the savings is not implemented.
               */
-            //TODO - implement overdraft  
+            //TODO - implement overdraft
             $('#savings-withdraw').on('click', function(){
                 var amt = app.ui.savings.amount();
                 try {
