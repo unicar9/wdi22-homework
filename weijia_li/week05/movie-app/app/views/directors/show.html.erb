@@ -1,0 +1,26 @@
+<h1>Director Details</h1>
+
+<div>
+  <p>Name: <%= @director.name %></p>
+  <p>DOB: <%= @director.dob %></p>
+  <p>Nationality: <%= @director.nationality %></p>
+
+
+
+
+  <!-- <p>List of Works:</p>
+
+  <ul>
+    <% @director.works.each do |work| %>
+      <li>
+        <a href="/works/<%= work.id %>"><%= work.title %></a>
+      </li>
+    <% end %>
+  </ul> -->
+
+  <a href="/directors/<%= @director.id %>/edit">Edit Artist Details</a>
+
+
+  <br>
+  <img src="<%= @director.image %>" alt="">
+</div>

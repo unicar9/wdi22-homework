@@ -1,0 +1,14 @@
+
+
+<!-- <a href="<%= @movie_url %>"><img src="<%= @poster_url %>" alt=""></a> -->
+
+<% (0..9).each do |i| %>
+
+<div class="wrapper">
+  <a href="https://www.themoviedb.org/movie/<%= @mdata["results"][i]["id"].to_s %>"><h3><%= @mdata["results"][i]["title"] %></h3></a>
+
+  <a href="https://www.themoviedb.org/movie/<%= @mdata["results"][i]["id"].to_s %>"><img src="http://image.tmdb.org/t/p/w300<%= @mdata["results"][i]["poster_path"] %>" alt=""></a>
+</div>
+
+
+<% end %>

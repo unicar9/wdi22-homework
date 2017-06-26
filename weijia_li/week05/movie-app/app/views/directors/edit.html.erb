@@ -1,0 +1,28 @@
+<h1>Edit Director</h1>
+
+<div>
+  <form action="/directors/<%= @director.id %>" method="post">
+
+    <fieldset>
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="<%= @director.name %>">
+    </fieldset>
+
+    <fieldset>
+      <label for="dob">DOB:</label>
+      <input type="date" name="dob" value="<%= @director.dob %>">
+    </fieldset>
+
+    <fieldset>
+      <label for="nationality">Nationality:</label>
+      <input type="text" name="nationality" value="<%= @director.nationality %>">
+    </fieldset>
+
+    <fieldset>
+      <label for="image">Image URL:</label>
+      <input type="text" name="image" value="<%= @director.image %>">
+    </fieldset>
+
+    <input type="submit">
+  </form>
+</div>

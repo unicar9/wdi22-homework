@@ -1,0 +1,17 @@
+body {
+  background-color: grey;
+  font-family: "Roboto", serif;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h3 {
+  float: right;
+}
+
+img {
+  width: 150px;
+}

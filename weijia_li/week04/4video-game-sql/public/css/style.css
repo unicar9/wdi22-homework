@@ -1,0 +1,17 @@
+body {
+  background-color: #F1F4F1;
+  font-family: "roboto", serif;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.edit {
+  font-size: 10px;
+}
+
+.delete {
+  font-size: 10px;
+}

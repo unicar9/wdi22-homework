@@ -1,0 +1,12 @@
+<h2>All animals</h2>
+
+<% @animals.each do |animal| %>
+<p>
+  <a href="/animals/<%= animal["id"] %>"><%= animal["species"]%></a>
+
+  <a class="edit" href="/animals/<%= animal["id"] %>/edit">edit</a>
+
+  <a class="edit" href="/animals/<%= animal["id"] %>/delete">delete</a>
+</p>
+
+<% end %>
