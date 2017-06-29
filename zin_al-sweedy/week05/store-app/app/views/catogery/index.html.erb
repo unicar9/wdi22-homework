@@ -1,0 +1,9 @@
+<h2>Catogries index</h2>
+<ul>
+  <% @catogeries.each do |catogery| %>
+  <li>
+    <a href="/catogries/<%= catogery.id %>"><%= catogery.name %></a>
+    <a data-method="delete" href="/catogeries">Delete</a>
+  </li>
+  <% end %>
+</ul>

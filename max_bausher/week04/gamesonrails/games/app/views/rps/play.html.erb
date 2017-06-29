@@ -1,0 +1,26 @@
+
+<div class="layout">
+    <h1 class="title">Rock Paper Scissors</h1>
+
+
+
+        <p><%= @result %></p>
+
+    <!-- <form action="/games/magic/"> -->
+    <label id="label">Play your move:</label> <br><br>
+    <button class="rpsbutton">Rock</button>
+    <button class="rpsbutton">Paper</button>
+    <button class="rpsbutton">Scissors</button>
+
+</div>
+<!-- </form> -->
+<script>
+
+        $('button').on('click',function(){
+            // debugger;
+            var humanMove = $(this).text();
+
+            // debugger
+            window.location.href = "/games/rock_paper_scissors/" + humanMove
+        });
+</script>

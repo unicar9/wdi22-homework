@@ -1,0 +1,24 @@
+
+You said your name was <%= params["movie_name"] %>
+
+
+<% @movie_results.each do |movie| %>
+  <!-- instead name movie -->
+  <!-- <p>NORMAL HTML</p> -->
+  <p>Movie Name:
+    <a href="/show_movie_details/<%= movie["id"] %>">
+      <%= movie["title"] %>
+    </a>
+  </p>
+  <hr>
+<% end %>
+
+
+<!-- can do if structure -->
+
+<!-- # <% if true %>
+# <p>true!</p>
+# <% else %>
+# <p>false!</p>
+# <% end %> -->
+<!-- print the image tags and links -->

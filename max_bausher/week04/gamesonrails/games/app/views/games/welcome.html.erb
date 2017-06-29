@@ -1,0 +1,26 @@
+
+
+<div class="layout">
+<h1 class="title">Games Menu</h1> <br><br>
+<button class="rpsbutton">Magic 8 Ball</button>
+<p>Ask me any question, and I will determine it's truthiness</p>
+<button class="rpsbutton">Rock Paper Scissors</button>
+<p>Rock beats scissors, Paper beats rock, and scissors beats paper</p>
+<button class="rpsbutton">Secret Number</button>
+<p>One try to guess my secret number, or I'll pick a new one for you to guess on your next click!</p>
+</div>
+
+<script>
+
+    $('button').on('click', function(){
+
+        var pickedGame  = $(this).text();
+        if (pickedGame === "Magic 8 Ball") {
+            window.location.href = "magic/"
+        }  else if (pickedGame === "Rock Paper Scissors") {
+            window.location.href = "rock_paper_scissors/"
+        } else if  (pickedGame === "Secret Number") {
+            window.location.href = "secret/"
+        }
+    });
+</script>

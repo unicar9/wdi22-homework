@@ -1,0 +1,28 @@
+<div class="wrapper">
+<h1 class="eightballheading"> Magic 8 Ball.</h1>
+
+<form method='get' action="/eightball">
+  <input type="text" name="question" placeholder="Ask a Y/N question">
+  <button class="shaker">Shake</button>
+</form>
+
+<div id="#toggle">
+
+<p class="question"><%= @question %></p>
+
+<!-- <form action="eightball/:question" method="get">
+  Ask a question to the mystical eight ball: <input type="text" name="question"><br>
+  <input type="submit" value=":question">
+</form> -->
+
+
+<p class="answer"><%= @answer %></p>
+<img class="eightball" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Magic_eight_ball.png">
+</div>
+
+</div>
+
+
+<script src="assets/jquery.js" charset="utf-8"></script>
+<script src="assets/jquery_ui.js"></script>
+<script src="assets/script.js" charset="utf-8"></script>

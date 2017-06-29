@@ -1,0 +1,20 @@
+
+
+<div class="layout">
+<h2 class="title">Beer Profile</h2>
+
+
+<p>Type: <%= @beer.style %></p>
+<img class="beer_photo" src="<%= @beer.image %>">
+<br>
+<p>Brewery: <a href="/breweries/<%= @beer.brewery.id %>"><%= @beer.brewery.name %></a></p>
+<p>ABV: <%= @beer.abv %></p>
+<p>Tasting Notes: <%= @beer.tastingnotes %></p>
+
+
+
+<a href="/beers/<%= @beer.id %>/edit">Edit Beer Profile Details  ||   </a>
+
+
+<%= link_to "Delete", "/beers/#{ @beer.id }", method: :delete %>
+</div>

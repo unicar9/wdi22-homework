@@ -154,7 +154,7 @@ p {
     position: relative;
     background-color: rgba(143, 16, 187, 0.42);
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 10s;
     padding: 0px 5px;
 }
 

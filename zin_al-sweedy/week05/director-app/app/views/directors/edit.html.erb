@@ -1,0 +1,18 @@
+<h2>Edit Director</h2>
+
+<form action="/directors/<%= @director.id %>" method="post">
+
+Name:
+<input type="text" name="name" value="<%= @director.name %>">
+<br>
+Age:
+<input type="text" name="age" value="<%= @director.age %>">
+<br>
+Period:
+<input type="text" name="period" value="<%= @director.period %>">
+<br>
+Image URL:
+<input type="text" name="image" value="<%= @director.image %>">
+<br>
+<button>Update Director</button>
+</form>

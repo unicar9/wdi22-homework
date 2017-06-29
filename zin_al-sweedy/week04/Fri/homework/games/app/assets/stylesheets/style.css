@@ -1,0 +1,15 @@
+a.visited {
+  color: green;
+}
+
+a {
+  color: red;
+  padding: 2px;
+}
+
+body {
+  background-color: blue;
+}
+input {
+  width: 150px;
+}

@@ -1,0 +1,15 @@
+<h2>Results:</h2>
+
+<%@multiple_results.each_with_index do |result, index|%>
+  <h3><marquee direction: "right"><%= index +1 %>:  <%=result["title"]%></marquee></h3>
+
+
+  <div class = "poster"><a href="https://api.themoviedb.org/3/movie/<%= result["id"]%>?api_key=24d863d54c86392e6e1df55b9a328755"><img src="http://image.tmdb.org/t/p/w300<%= result["poster_path"]%>" alt="movie poster"/></a>
+
+  <div class = info>
+    <div>Synopsis:<p><%=result["overview"]%>></p></div>
+    <div>Release Date: <%=result["release_date"]%></div>
+    <div>User rating: <%=result["vote_average"]%></div>
+  </div>
+
+<%end%>

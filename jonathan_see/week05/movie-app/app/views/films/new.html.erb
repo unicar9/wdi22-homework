@@ -1,0 +1,37 @@
+<h2>Create New Work</h2>
+
+<%= form_for @film do |f| %>
+
+  <p>
+  <%= f.label :director_id %>
+  <%= f.collection_select( :director_id, @directors, :id, :name, include_blank: true ) %>
+  </p>
+
+  <p>
+  <%= f.label :title %>
+  <%= f.text_field :title, required: true %>
+  </p>
+
+  <p>
+  <%= f.label :country %>
+  <%= f.text_field :country, required: true %>
+  </p>
+
+  <p>
+  <%= f.label :running_time %>
+  <%= f.text_field :running_time, required: true %>
+  </p>
+
+  <p>
+  <%= f.label :release_date %>
+  <%= f.text_field :release_date, required: true %>
+  </p>
+
+  <p>
+  <%= f.label :image %>
+  <%= f.text_field :image, required: true %>
+  </p>
+
+<%= f.submit %>
+
+<% end %>

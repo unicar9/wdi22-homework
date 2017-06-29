@@ -4,18 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
   <script src="js/jquery.js" charset="utf-8"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
   <script src="js/main.js" charset="utf-8"></script>
-  <title>AJAX for microsoft weenies</title>
+  <title>Movie DB</title>
 </head>
 <body>
-
-  <h1>Movie DB</h1>
+<div class="container">
+  <h1>Go Away or Search a Movie</h1>
+  <i class="material-icons prefix">search</i>
   <input type="text" name="" value="">
-  <button id="search" type="search" name="button">Search</button>
-  <button id="back" type="back" name="button">Back</button>
-  <div id="main"></div>
+  <a id="search" class="waves-effect waves-light btn">Search</a>
+  <a id="back" class="waves-effect waves-light btn">Back</a>
+  <div id="main" class="row"></div>
+
   <div id="detail"></div>
+</div>
+
 
 </body>
 </html>

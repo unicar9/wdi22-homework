@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+/*font-family: 'Gloria Hallelujah', cursive;*/
+
+body {
+     background:#F012BE;
+     margin:0;
+     padding:0;
+ }
+
+ header {
+   font-family: 'Gloria Hallelujah', cursive;
+   color:#DDDDDD;
+   font-size: 200px;
+   position: absolute;
+ }
+
+.dogs2, .dogs1, .M {
+  animation: shimmy 5s infinite;
+  animation-direction: alternate;
+  z-index: -1;
+
+}
+
+@keyframes shimmy {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 50px);
+  }
+}

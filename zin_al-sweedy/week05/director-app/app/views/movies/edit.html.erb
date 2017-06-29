@@ -1,0 +1,17 @@
+<h2>Edit Movie</h2>
+<%= form_for @movie do |m| %>
+<p>
+  <%= m.label :director_id %><%= m.collection_select(:director_id, @directors, :id, :name, include_blank: true) %>
+</p>
+<p>
+  <%= m.label :title %>
+  <%= m.text_field :title, required: true %>
+</p>
+
+<p>
+  <%= m.label :year %>
+  <%= m.text_field :year, required: true %>
+</p>
+
+<%= m.submit %>
+<% end %>

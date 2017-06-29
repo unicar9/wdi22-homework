@@ -1,0 +1,40 @@
+
+
+body{
+  background-color: #ffd600;
+}
+
+.taytay {
+  border: 10px dashed rgb(190, 200, 247);
+}
+
+.one{
+float: left;
+}
+
+.two {
+float:right;
+}
+
+.small {
+  width:140px;
+  height:140px;
+  float:left;
+  z-index: -1;
+}
+
+div>header {
+  border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em; */
+    -moz-border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+    -webkit-border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+  border-left-style: dashed;
+  border-right-style: solid;
+  border-bottom-style:ridge;
+  color: #75eba3;
+}
+
+body {
+  font-family: "Comic Sans MS";
+  font-size: 50px;
+  text-align: center;
+}

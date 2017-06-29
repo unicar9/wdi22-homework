@@ -1,0 +1,17 @@
+
+
+<h1 class="eightballheading"> Scissors Paper Rock!</h1>
+<p>You chose <%= @chosen %>. Computer chose <%= @computer %>.</p>
+<%= @result %>
+
+<div id="rockpaper">
+<img src="<%= @playpic %>">
+<img src="<%= @computerpic %>">
+</div>
+
+<form method='get' action="/rock/">
+  <br>
+  <button>Play again</button>
+</form>
+
+<!-- <script src="assets/script.js" charset="utf-8"></script> -->

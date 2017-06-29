@@ -1,0 +1,10 @@
+<h2>Edit Catogery</h2>
+<form action="/catogeries/<%= @catogery.id %>" method="post">
+Name:
+<input type="text" name="name" value="<%=@catogery.name %>">
+<br>
+Number:
+<input type="text" name="number" value="<%= @catogery.number %>">
+<br>
+<button>Update Catogery</button>
+</form>

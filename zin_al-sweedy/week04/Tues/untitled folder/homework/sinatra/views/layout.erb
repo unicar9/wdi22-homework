@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Our First Sinatra App</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- / above means in public folder  no need to say public / means happening from public folder-->
+</head>
+<body>
+  <nav>
+    <a href="/"></a>
+  </nav>
+  <h1>Hello World (header)</h1>
+<!-- break html to ruby then pass it back not seen in page with not showing in the page  to see the output  put = -->
+  <%= yield %>
+  <!-- what ever yeaild return run the block -->
+  <!-- go to the exact block from url I type it  -->
+  <h2>Footer goes here</h2>
+</body>
+</html>

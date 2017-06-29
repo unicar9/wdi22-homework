@@ -51,7 +51,7 @@ var cockpit = function(){
         haylivia.fadeOut(1000);
       }
     })
-  this.dogFight();
+  dogFight();
 };
 
 // var takeOffDone = false;
@@ -64,9 +64,9 @@ var takeOff = function(){
   //or fade and shrink catjet while moving right by about 50px;
   $catjet.animate({
     opacity: 0.5,
-    left:  50%, //"+=100", // '50%'
+    left: 50%, //"+=100",
     height: 50%, //"-=100"
-    width: '0px', //"-=100"
+    width: '0px' //"-=100"
   }, 100, function() {
     // Animation complete.
   });

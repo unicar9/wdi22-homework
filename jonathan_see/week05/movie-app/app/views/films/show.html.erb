@@ -1,0 +1,24 @@
+
+<h2>Film Details</h2>
+
+<p>Title: <%= @film.title %></p>
+
+<p>Director:
+<% if @film.director.present? %>
+  <a href="/directors/<%= @film.director.id %>"><%= @film.director.name %></a>
+<% else %>
+  (unknown)
+<% end %>
+</p>
+
+<p>Country: <%= @film.country %></p>
+
+<p>Running Time: <%= @film.running_time %></p>
+
+<p>Release Date: <%= @film.release_date %></p>
+
+<a href="/films/<%= @film.id %>/edit">Edit Work Details</a>
+
+<br>
+
+<img class="film_photo" src="<%= @film.image %>" alt="">

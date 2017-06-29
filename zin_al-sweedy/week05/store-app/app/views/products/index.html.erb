@@ -1,0 +1,9 @@
+<h2>Products Index</h2>
+<ul>
+  <% @products.each do |product| %>
+  <li>
+    <a href="/products/<%= pproduct.id %>"><%= product.name %></a>
+    <a data-method="delete" href="/products/<%= product.id %>">Delete</a>
+  </li>
+  <% end %>
+</ul>

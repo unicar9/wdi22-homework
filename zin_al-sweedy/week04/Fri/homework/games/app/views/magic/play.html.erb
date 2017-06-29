@@ -1,0 +1,24 @@
+
+<h1>Games</h1>
+<!-- could be add some text to answers on array and .sample -->
+<p>Your question:  <%= @question %></p>
+<br>
+
+<input type="text" placeholder="put your response here if you like ">
+<button>Submit</button>
+<br>
+<br>
+<br><br>
+<p> Computer Respons: <%= @magic_8_ball %> </p>
+
+
+
+<script>
+var button = document.querySelector("button")
+var input = document.querySelector("input")
+button.onclick = function(){
+  // console.log(input.value)
+location.href = "/games/magic/" + input.value
+};
+console.log("Hello")
+</script>

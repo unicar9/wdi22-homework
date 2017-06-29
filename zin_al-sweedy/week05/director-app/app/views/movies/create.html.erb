@@ -1,0 +1,23 @@
+<h2>Create New Movie</h2>
+
+<%= form_for @movie do |f| %>
+
+  <p>
+  <%= f.label :director_id %>
+  <%= f.collection_select( :director_id, @director, :id,:name, include_blank: true ) %>
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true %>
+  </p>
+
+<p>
+  <%= f.label :year %>
+  <%= f.text_field :year, required: true %>
+</p>
+
+
+<%= f.submit %>
+
+<% end %>

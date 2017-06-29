@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto|Roboto+Mono');
+
+
+body {
+  background-color: #495867;
+  color: #F7F7FF;
+  font-family: 'Roboto', monospace;
+  justify-content: center;
+  text-align: center;
+}
+
+img {
+
+  width:400px;
+  height:300px;
+
+}
+
+a.edit {
+  font-size: 10pt;
+  text-decoration: none;
+  color: #F7F7FF;
+}
+
+a.edit:hover {
+  font-size: 11pt;
+  color: silver;
+}
+
+.thumbnail {
+  width:250px;
+  height:150px;
+  transition: 0.1s all ease-in-out;
+}
+
+.pic {
+  width:500px;
+  height:300px;
+}
+
+.thumbnail:hover {
+  border: 2px solid black;
+
+}
+
+.wrapper {
+  justify-content: center;
+  text-align: center;
+
+}

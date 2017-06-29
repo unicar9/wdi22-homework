@@ -1,0 +1,32 @@
+
+<div class="layout">
+<h2 class="title">Create A New Beer Profile</h2>
+
+<%= form_for @beer do |f| %>
+
+    <p>
+        <%= f.label :brewery_id %>
+        <%= f.collection_select( :brewery_id, @breweries, :id, :name, include_blank: true ) %>
+    </p>
+
+    <p>
+        <%= f.label :style %>
+        <%= f.text_field :style, required: true %>
+    </p>
+    <p>
+        <%= f.label :image %>
+        <%= f.text_field :image, required: true %>
+    </p>
+    <p>
+        <%= f.label :abv %>
+        <%= f.text_field :abv, required: true %>
+    </p>
+    <p>
+        <%= f.label :tastingnotes %>
+        <%= f.text_field :tastingnotes, required: true %>
+    </p>
+
+    <%= f.submit %>
+
+<% end %>
+</div>

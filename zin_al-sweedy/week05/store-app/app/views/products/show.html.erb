@@ -1,0 +1,20 @@
+<h2>Product Details</h2>
+<p>Name: <%= @product.name %></p>
+<p>Sale:
+  <% if @product.sale.present? %>
+    <a href="/sales/<%= @product.sale.id %>"><%= @product.sale.number %></a>
+  <% else %>
+    (unkown)
+  <% end %>
+</p>
+
+<p>Sale:
+  <% if @product.catogery.present? %>
+  <a href="/catogeries/<%= @product.catogery.id %>"><%= @product.catogery.name %></a>
+<% else %>
+  (unkown)
+<% end %>
+</p>
+<p>Number: <%= @product.number %></p>
+<p>Quantity: <%= @product.quantity %></p>
+<p>Price: <%= @product.price %></p>
